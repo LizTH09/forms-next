@@ -1,0 +1,5 @@
+.formContainer{
+    background: linear-gradient(rgba(118, 201, 165, 0.849), white 15%);
+    min-height: 100vh;
+    display: flow-root;
+}
