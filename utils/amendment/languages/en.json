@@ -1,0 +1,75 @@
+{
+    "title": "Company Amendment",
+    "steps": {
+      "step1": {
+        "title": "Company Information",
+        "help": "Company Information....",
+        "labels": {
+          "label1": "Company Name",
+          "label2": "TAX ID",
+          "label3": "Phone",
+          "label4": "Email",
+          "label5": "Document Number",
+          "label6": "Type Of Organization",
+          "label7": "New Name",
+          "label8": "Principal Address",
+          "label9": "City",
+          "label10": "State",
+          "label11": "Zip Code",
+          "label12": "Address #2",
+          "label13": "City",
+          "label14": "State",
+          "label15": "Zip Code"
+        },
+        "options": {
+          "label6": {
+            "option1": "Select One",
+            "option2": "Corporation (C - CORP)",
+            "option3": "Corporation (S - CORP)",
+            "option4": "Corporation (Partnership)",
+            "option5": "Corporation (Single Member)",
+            "option6": "Limited Liability Company",
+            "option7": "Limited Liability Company (C - CORP)",
+            "option8": "Limited Liability Company (S - CORP)",
+            "option9": "Other (TBD)"
+          }
+        }
+      },
+      "step2": {
+        "title": "Change Officers",
+        "help": "Update Officers Information ....",
+        "labels": {
+          "label1": "Complete Name",
+          "label2": "Position",
+          "label3": "Action",
+          "label4": "Signature"
+        },
+        "options": {
+          "add": "Add One"
+        }
+      },
+      "step3": {
+        "title": "New Registrar Agent",
+        "help": "Update Agent Information ....",
+        "labels": {
+          "label1": "Complete Name",
+          "label2": "Address"
+        }
+      },
+      "step4": {
+        "title": "Authorization",
+        "help": "Information of the person authorizing these changes ....",
+        "labels": {
+          "label1": "Complete Name",
+          "lable2": "Authorization Signature",
+          "label3": "Position"
+        }
+      }
+    },
+    "buttons" : {
+        "button1" : "Back",
+        "button2" : "Next",
+        "button3" : "Send"
+    }
+  }
+  

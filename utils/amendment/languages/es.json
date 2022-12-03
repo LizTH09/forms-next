@@ -1,0 +1,74 @@
+{
+  "title": "Enmienda de Compañía",
+  "steps": {
+    "step1": {
+      "title": "Información de la Companía",
+      "help": "Información general de la Companía....",
+      "labels": {
+        "label1": "Nombre de la Compañía",
+        "label2": "TAX ID",
+        "label3": "Teléfono",
+        "label4": "Correo",
+        "label5": "Número de Documento",
+        "label6": "Tipo de Organización",
+        "label7": "Nuevo Nombre",
+        "label8": "Dirección Principal",
+        "label9": "Ciudad",
+        "label10": "Estado",
+        "label11": "Código Zip",
+        "label12": "Dirección #2",
+        "label13": "Ciudad",
+        "label14": "Estado",
+        "label15": "Código Zip"
+      },
+      "options": {
+        "label6": {
+          "option1": "Seleccione uno",
+          "option2": "Corporación (C - CORP)",
+          "option3": "Corporación (S - CORP)",
+          "option4": "Corporación (Asociación)",
+          "option5": "Corporación (Miembro Ãšnico)",
+          "option6": "Compañí­a de responsabilidad limitada",
+          "option7": "Compañí­a de responsabilidad limitada (C - CORP)",
+          "option8": "Compañí­a de responsabilidad limitada (S - CORP)",
+          "option9": "Otro (TBD)"
+        }
+      }
+    },
+    "step2": {
+      "title": "Cambio de Oficiales",
+      "help": "Actualización de la Información de los Oficiales ....",
+      "labels": {
+        "label1": "Nombre Completo",
+        "label2": "Cargo",
+        "label3": "Acción",
+        "label4": "Firma"
+      },
+      "options": {
+        "add": "Añadir"
+      }
+    },
+    "step3": {
+      "title": "Nuevo Agente Registrador",
+      "help": "Actualizar Información del Agente Registrador ....",
+      "labels": {
+        "label1": "Nombre Completo",
+        "label2": "Dirección"
+      }
+    },
+    "step4": {
+      "title": "Autorización",
+      "help": "Información de la persona que autoriza los cambios ....",
+      "labels": {
+        "label1": "Nombre Completo",
+        "lable2": "Firma de Autorización",
+        "label3": "Cargo"
+      }
+    }
+  },
+  "buttons" : {
+    "button1" : "Volver",
+    "button2" : "Continuar",
+    "button3" : "Enviar"
+}
+}
