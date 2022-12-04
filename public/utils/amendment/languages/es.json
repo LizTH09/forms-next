@@ -3,7 +3,7 @@
   "steps": {
     "step1": {
       "title": "Información de la Companía",
-      "help": "Información general de la Companía....",
+      "description": "Información general de la Companía....",
       "labels": {
         "label1": "Nombre de la Compañía",
         "label2": "TAX ID",
@@ -34,7 +34,7 @@
     },
     "step2": {
       "title": "Cambio de Oficiales",
-      "help": "Actualización de la Información de los Oficiales ....",
+      "description": "Actualización de la Información de los Oficiales ....",
       "labels": {
         "label1": "Nombre Completo",
         "label2": "Cargo",
@@ -57,7 +57,7 @@
     },
     "step3": {
       "title": "Nuevo Agente Registrador",
-      "help": "Actualizar Información del Agente Registrador ....",
+      "description": "Actualizar Información del Agente Registrador ....",
       "labels": {
         "label1": "Nombre Completo",
         "label2": "Dirección"
@@ -65,7 +65,7 @@
     },
     "step4": {
       "title": "Autorización",
-      "help": "Información de la persona que autoriza los cambios ....",
+      "description": "Información de la persona que autoriza los cambios ....",
       "labels": {
         "label1": "Nombre Completo",
         "lable2": "Firma de Autorización",

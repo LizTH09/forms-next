@@ -3,7 +3,7 @@
   "steps": {
     "step1": {
       "title": "Company Information",
-      "help": "Company Information....",
+      "description": "Company Information....",
       "labels": {
         "label1": "Company Name",
         "label2": "TAX ID",
@@ -34,7 +34,7 @@
     },
     "step2": {
       "title": "Change Officers",
-      "help": "Update Officers Information ....",
+      "description": "Update Officers Information ....",
       "labels": {
         "label1": "Complete Name",
         "label2": "Position",
@@ -57,7 +57,7 @@
     },
     "step3": {
       "title": "New Registrar Agent",
-      "help": "Update Agent Information ....",
+      "description": "Update Agent Information ....",
       "labels": {
         "label1": "Complete Name",
         "label2": "Address"
@@ -65,7 +65,7 @@
     },
     "step4": {
       "title": "Authorization",
-      "help": "Information of the person authorizing these changes ....",
+      "description": "Information of the person authorizing these changes ....",
       "labels": {
         "label1": "Complete Name",
         "lable2": "Authorization Signature",

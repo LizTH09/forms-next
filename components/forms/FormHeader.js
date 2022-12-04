@@ -1,9 +1,12 @@
-import React from 'react'
-
-const FormHeader = ({title, description, date}) => {
+const FormHeader = ({ title, description, date }) => {
   return (
-    <div>formHeader</div>
-  )
-}
+    <div>
+      aaaaaaaaaaaaaaaaaa
+      <h1>{title}</h1>
+      <span>{description}</span>
+      <p>{date}</p>
+    </div>
+  );
+};
 
-export default FormHeader
+export default FormHeader;
