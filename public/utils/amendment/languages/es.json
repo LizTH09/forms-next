@@ -16,23 +16,20 @@
         "label9": "Ciudad",
         "label10": "Estado",
         "label11": "Código Zip",
-        "label12": "Dirección #2",
-        "label13": "Ciudad",
-        "label14": "Estado",
-        "label15": "Código Zip"
+        "label12": "Dirección #2"
       },
       "options": {
-        "label6": {
-          "option1": "Seleccione uno",
-          "option2": "Corporación (C - CORP)",
-          "option3": "Corporación (S - CORP)",
-          "option4": "Corporación (Asociación)",
-          "option5": "Corporación (Miembro Ãšnico)",
-          "option6": "Compañí­a de responsabilidad limitada",
-          "option7": "Compañí­a de responsabilidad limitada (C - CORP)",
-          "option8": "Compañí­a de responsabilidad limitada (S - CORP)",
-          "option9": "Otro (TBD)"
-        }
+        "label6": [
+          "Seleccione uno",
+          "Corporación (C - CORP)",
+          "Corporación (S - CORP)",
+          "Corporación (Asociación)",
+          "Corporación (Miembro Único)",
+          "Compañí­a de responsabilidad limitada",
+          "Compañí­a de responsabilidad limitada (C - CORP)",
+          "Compañí­a de responsabilidad limitada (S - CORP)",
+          "Otro (TBD)"
+        ]
       }
     },
     "step2": {
@@ -45,7 +42,17 @@
         "label4": "Firma"
       },
       "options": {
-        "add": "Añadir"
+        "label2": [
+          "Seleccione uno",
+          "Presidente",
+          "Vice-Presidente",
+          "Secretario(a)",
+          "Director(a)",
+          "Administrador(LLC)",
+          "Miembro Designado (AMBR)",
+          "Miembro (MBR)",
+          "Accionista"
+        ]
       }
     },
     "step3": {
@@ -63,12 +70,25 @@
         "label1": "Nombre Completo",
         "lable2": "Firma de Autorización",
         "label3": "Cargo"
+      },
+      "options": {
+        "label3": [
+          "Seleccione uno",
+          "Presidente",
+          "Vice-Presidente",
+          "Secretario(a)",
+          "Director(a)",
+          "Administrador(LLC)",
+          "Miembro Designado (AMBR)",
+          "Miembro (MBR)",
+          "Accionista"
+        ]
       }
     }
   },
-  "buttons" : {
-    "button1" : "Volver",
-    "button2" : "Continuar",
-    "button3" : "Enviar"
-}
+  "buttons": {
+    "button1": "Volver",
+    "button2": "Continuar",
+    "button3": "Enviar"
+  }
 }
