@@ -1,10 +1,13 @@
+import styles from "../../styles/forms/FormHeader.module.css";
+
 const FormHeader = ({ title, description, date }) => {
   return (
-    <div>
-      aaaaaaaaaaaaaaaaaa
-      <h1>{title}</h1>
-      <span>{description}</span>
-      <p>{date}</p>
+    <div className={styles.container}>
+      <div className={styles.leftPart}>
+        <h1 className={styles.title}>{title}</h1>
+        <span className={styles.description}>{description}</span>
+      </div>
+      <p className={styles.date}>{date}</p>
     </div>
   );
 };

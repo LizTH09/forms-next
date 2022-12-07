@@ -11,7 +11,7 @@
         "label4": "Email",
         "label5": "Document Number",
         "label6": "Type Of Organization",
-        "label7": "New Name",
+        "label7": "New Company Name",
         "label8": "Principal Address",
         "label9": "City",
         "label10": "State",
@@ -52,6 +52,10 @@
           "Appointet Member (AMBR)",
           "Member (MBR)",
           "Shareholder"
+        ],
+        "label3": [
+          "Add",
+          "Remove"
         ]
       }
     },

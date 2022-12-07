@@ -4,7 +4,7 @@
   padding: 15px 30px;
   box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.07);
   border-radius: 50px;
-  position: fixed;
+  position: absolute;
   top: 15px;
   left: 50%;
   transform: translateX(-50%);

@@ -2,7 +2,7 @@
     width: min(1024px, calc(100% - 20px));
     display: flex;
     justify-content: space-between;
-    margin: 150px auto 0;
+    margin: 120px auto 50px;
     align-items: center;
 }
 
@@ -31,4 +31,15 @@
 
 .lineStepActive{
     background-color:   #25c89c;
+}
+
+@media screen and (max-width: 460px) {
+    .stepContainer{
+        width: min(460px, calc(100% - 80px));
+        margin: 40px auto;
+    }
+    .step{
+        width: 30px;
+        height: 30px;
+    }
 }

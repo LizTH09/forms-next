@@ -11,7 +11,7 @@
         "label4": "Correo",
         "label5": "Número de Documento",
         "label6": "Tipo de Organización",
-        "label7": "Nuevo Nombre",
+        "label7": "Nuevo Nombre de Compañía",
         "label8": "Dirección Principal",
         "label9": "Ciudad",
         "label10": "Estado",
@@ -52,7 +52,8 @@
           "Miembro Designado (AMBR)",
           "Miembro (MBR)",
           "Accionista"
-        ]
+        ],
+        "label3": ["Añadir", "Quitar"]
       }
     },
     "step3": {

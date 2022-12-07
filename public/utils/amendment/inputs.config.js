@@ -37,12 +37,14 @@ const inputs = [
         dataAccept: "string",
         label: "label6",
       },
+      { dataType: "newSection" },
       {
         id: "company-information--new-name",
         dataType: "text",
         dataAccept: "string",
         label: "label7",
       },
+      { dataType: "newSection" },
       {
         id: "company-information--principal-address",
         dataType: "text",
@@ -67,6 +69,7 @@ const inputs = [
         dataAccept: "int",
         label: "label11",
       },
+      { dataType: "newSection" },
       {
         id: "company-information--secondary-address",
         dataType: "text",
@@ -109,15 +112,14 @@ const inputs = [
       },
       {
         id: "change-officers--action",
-        dataType: "text",
+        dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
       },
       {
         id: "change-officers--signature",
-        dataType: "text",
+        dataType: "signature",
         dataAccept: "string",
-        label: "label4",
       },
     ],
   },
@@ -146,19 +148,19 @@ const inputs = [
         label: "label1",
       },
       {
-        id: "authorization--signature",
-        dataType: "signature",
-        dataAccept: "string",
-        label: "label2"
-      },
-      {
         id: "authorization--position",
         dataType: "dropDown",
         dataAccept: "string",
-        label: "label3"
+        label: "label3",
+      },
+      {
+        id: "authorization--signature",
+        dataType: "signature",
+        dataAccept: "string",
+        label: "label2",
       },
     ],
   },
-]
+];
 
 export default inputs;

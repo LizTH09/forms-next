@@ -1,16 +1,22 @@
-import React from 'react'
+import styles from "/styles/forms/inputs/InputDropDown.module.css";
 
-const InputDropDown = ({ text, id, dataAccept, label }) => {
+const InputDropDown = ({ text, id, dataAccept, label, width }) => {
   return (
-    <div>
-      <label>{text.labels[label]}</label>
-      <select id={id}>
+    <div className={styles.inputContainer} style={{ Width: width }}>
+      <select className={styles.input} id={id} placeholder=" ">
         {text.options[label].map((value, index) => (
-          <option value={index ? value : ""} disabled={!index} selected={!index}>{value}</option>
+          <option
+            value={index ? value : ""}
+            disabled={!index}
+            selected={!index}
+          >
+            {value}
+          </option>
         ))}
       </select>
+      <label className={styles.inputLabel}>{text.labels[label]}</label>
     </div>
-  )
-}
+  );
+};
 
-export default InputDropDown
+export default InputDropDown;

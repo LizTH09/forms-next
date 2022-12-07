@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftPart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  display: none;
+}
+
+.date {
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background: ececec;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .date {
+    align-self: end;
+    margin-top: 30px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: min(1024px, calc(100% - 20px));
+    background: rgba(219, 219, 219, 0.537);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 0 auto 50px;
+}
+

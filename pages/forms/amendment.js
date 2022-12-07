@@ -7,6 +7,7 @@ import StepButtonsControlers from "/components/forms/StepButtonsControlers";
 import Form from "/components/forms/Form";
 import inputs from "/public/utils/amendment/inputs.config";
 import FormHeader from "../../components/forms/formHeader";
+import InputContainer from "../../components/forms/InputContainer";
 const Amendment = () => {
   const date = new Date();
   const [language, setLanguage] = useState("en");
@@ -27,18 +28,20 @@ const Amendment = () => {
       <NavBar title={text?.title} setLanguage={setLanguage} />
       <TitleMobile title={text?.title} />
       <StepIndicator maxSteps={MAX_STEPS} currentStep={currentStep} />
-      <FormHeader
-        title={text?.steps[`step${currentStep}`]?.title}
-        description={text?.steps[`step${currentStep}`]?.description}
-        date={date.toLocaleDateString()}
-      />
-      <Form inputs={inputs} text={text} currentStep={currentStep} />
-      <StepButtonsControlers
-        setCurrentStep={setCurrentStep}
-        currentStep={currentStep}
-        maxSteps={MAX_STEPS}
-        text={text}
-      />
+      <InputContainer>
+        <FormHeader
+          title={text?.steps[`step${currentStep}`]?.title}
+          description={text?.steps[`step${currentStep}`]?.description}
+          date={date.toLocaleDateString()}
+        />
+        <Form inputs={inputs} text={text} currentStep={currentStep} />
+        <StepButtonsControlers
+          setCurrentStep={setCurrentStep}
+          currentStep={currentStep}
+          maxSteps={MAX_STEPS}
+          text={text}
+        />
+      </InputContainer>
     </FormContainer>
   );
 };

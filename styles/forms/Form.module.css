@@ -1,0 +1,13 @@
+.inputContainer {
+  width: 100%;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .inputContainer {
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
