@@ -1,11 +1,17 @@
-import styles from '/styles/forms/inputs/InputText.module.css'
+import styles from "/styles/forms/inputs/InputText.module.css";
 
-const InputText = ({ text, id, dataAccept, label, width }) => {
+const InputText = ({ text, id, dataAccept, label, width, form, setForm }) => {
   return (
     <>
       {text && (
-        <div className={styles.inputContainer}  style={{width: width}}>
-          <input className={styles.input} id={id} placeholder= " "></input>
+        <div className={styles.inputContainer} style={{ width: width }}>
+          <input
+            className={styles.input}
+            id={id}
+            value={form[id]}
+            placeholder=" "
+            onChange={(e) => setForm({ ...form, [id]: e.target.value })}
+          ></input>
           <label className={styles.inputLabel}>{text[label]}</label>
         </div>
       )}

@@ -4,7 +4,7 @@ import InputNumber from "./inputs/InputNumber";
 import InputDropDown from "./inputs/InputDropDown";
 import InputSignature from "./inputs/InputSignature";
 
-const Input = ({ text, id, dataType, dataAccept, label, width }) => {
+const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) => {
   return (
     <>
       {dataType == "text" && (
@@ -14,6 +14,8 @@ const Input = ({ text, id, dataType, dataAccept, label, width }) => {
           dataAccept={dataAccept}
           label={label}
           width = {width}
+          form={form}
+          setForm={setForm}
         />
       )}
       {dataType == "tel" && (
@@ -23,6 +25,8 @@ const Input = ({ text, id, dataType, dataAccept, label, width }) => {
           dataAccept={dataAccept}
           label={label}
           width = {width}
+          form={form}
+          setForm={setForm}
         />
       )}
       {dataType == "number" && (
@@ -32,6 +36,8 @@ const Input = ({ text, id, dataType, dataAccept, label, width }) => {
           dataAccept={dataAccept}
           label={label}
           width = {width}
+          form={form}
+          setForm={setForm}
         />
       )}
       {dataType == "dropDown" && (
@@ -41,6 +47,8 @@ const Input = ({ text, id, dataType, dataAccept, label, width }) => {
           dataAccept={dataAccept}
           label={label}
           width = {width}
+          form={form}
+          setForm={setForm}
         />
       )}
       {dataType == "signature" && (
@@ -50,6 +58,8 @@ const Input = ({ text, id, dataType, dataAccept, label, width }) => {
           dataAccept={dataAccept}
           label={label}
           width = {width}
+          form={form}
+          setForm={setForm}
         />
       )}
       {dataType == "newSection" && (

@@ -2,94 +2,94 @@ const inputs = [
   {
     step1: [
       {
-        id: "company-information--company-name",
+        id: "company_information__company_name",
         dataType: "text",
         dataAccept: "string",
         label: "label1",
       },
       {
-        id: "company-information--tax-id",
+        id: "company_information__tax_id",
         dataType: "number",
         dataAccept: "int",
         label: "label2",
       },
       {
-        id: "company-information--phone",
+        id: "company_information__phone",
         dataType: "tel",
         dataAccept: "int",
         label: "label3",
       },
       {
-        id: "company-information--email",
+        id: "company_information__email",
         dataType: "text",
         dataAccept: "string",
         label: "label4",
       },
       {
-        id: "company-information--document-number",
+        id: "company_information__document_number",
         dataType: "number",
         dataAccept: "int",
         label: "label5",
       },
       {
-        id: "company-information--type-organization",
+        id: "company_information__type_organization",
         dataType: "dropDown",
         dataAccept: "string",
         label: "label6",
       },
       { dataType: "newSection" },
       {
-        id: "company-information--new-name",
+        id: "company_information__new_name",
         dataType: "text",
         dataAccept: "string",
         label: "label7",
       },
       { dataType: "newSection" },
       {
-        id: "company-information--principal-address",
+        id: "company_information__principal_address",
         dataType: "text",
         dataAccept: "string",
         label: "label8",
       },
       {
-        id: "company-information--principal-city",
+        id: "company_information__principal_city",
         dataType: "text",
         dataAccept: "string",
         label: "label9",
       },
       {
-        id: "company-information--principal-state",
+        id: "company_information__principal_state",
         dataType: "text",
         dataAccept: "string",
         label: "label10",
       },
       {
-        id: "company-information--principal-zip-code",
+        id: "company_information__principal_zip_code",
         dataType: "number",
         dataAccept: "int",
         label: "label11",
       },
       { dataType: "newSection" },
       {
-        id: "company-information--secondary-address",
+        id: "company_information__secondary_address",
         dataType: "text",
         dataAccept: "string",
         label: "label12",
       },
       {
-        id: "company-information--secondary-city",
+        id: "company_information__secondary_city",
         dataType: "text",
         dataAccept: "string",
         label: "label9",
       },
       {
-        id: "company-information--secondary-state",
+        id: "company_information__secondary_state",
         dataType: "text",
         dataAccept: "string",
         label: "label10",
       },
       {
-        id: "company-information--secondary-zip-code",
+        id: "company_information__secondary_zip_code",
         dataType: "number",
         dataAccept: "int",
         label: "label11",
@@ -99,25 +99,25 @@ const inputs = [
   {
     step2: [
       {
-        id: "change-officers--complete-name",
+        id: "change_officers__complete_name",
         dataType: "text",
         dataAccept: "string",
         label: "label1",
       },
       {
-        id: "change-officers--position",
+        id: "change_officers__position",
         dataType: "dropDown",
         dataAccept: "string",
         label: "label2",
       },
       {
-        id: "change-officers--action",
+        id: "change_officers__action",
         dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
       },
       {
-        id: "change-officers--signature",
+        id: "change_officers__signature",
         dataType: "signature",
         dataAccept: "string",
       },
@@ -126,13 +126,13 @@ const inputs = [
   {
     step3: [
       {
-        id: "agent-register--complete-name",
+        id: "agent_register__complete_name",
         dataType: "text",
         dataAccept: "string",
         label: "label1",
       },
       {
-        id: "agent-register--address",
+        id: "agent_register__address",
         dataType: "text",
         dataAccept: "string",
         label: "label2",
@@ -142,19 +142,19 @@ const inputs = [
   {
     step4: [
       {
-        id: "authorization--complete-name",
+        id: "authorization__complete_name",
         dataType: "text",
         dataAccept: "string",
         label: "label1",
       },
       {
-        id: "authorization--position",
+        id: "authorization__position",
         dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
       },
       {
-        id: "authorization--signature",
+        id: "authorization__signature",
         dataType: "signature",
         dataAccept: "string",
         label: "label2",

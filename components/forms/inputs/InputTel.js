@@ -1,9 +1,25 @@
-import styles from '/styles/forms/inputs/InputTel.module.css'
+import styles from "/styles/forms/inputs/InputTel.module.css";
 
-const InputTel = ({ text, id, dataType, dataAccept, label, width }) => {
+const InputTel = ({
+  text,
+  id,
+  dataType,
+  dataAccept,
+  label,
+  width,
+  form,
+  setForm,
+}) => {
   return (
-    <div className={styles.inputContainer}  style={{width: width}}>
-      <input className={styles.input} id={id} datatype={dataType} placeholder= " "></input>
+    <div className={styles.inputContainer} style={{ width: width }}>
+      <input
+        className={styles.input}
+        id={id}
+        value={form[id]}
+        datatype={dataType}
+        placeholder=" "
+        onChange={(e) => setForm({ ...form, [id]: e.target.value })}
+      ></input>
       <label className={styles.inputLabel}>{text[label]}</label>
     </div>
   );
