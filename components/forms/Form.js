@@ -14,7 +14,6 @@ const Form = ({ inputs, text, currentStep, form, setForm }) => {
               dataType={input.dataType}
               dataAccept={input.dataAccept}
               label={input.label}
-              width={input.width}
               form={form}
               setForm={setForm}
             />

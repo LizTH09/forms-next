@@ -1,10 +1,10 @@
 import styles from "/styles/forms/inputs/InputText.module.css";
 
-const InputText = ({ text, id, dataAccept, label, width, form, setForm }) => {
+const InputText = ({ text, id, dataAccept, label, form, setForm }) => {
   return (
     <>
       {text && (
-        <div className={styles.inputContainer} style={{ width: width }}>
+        <div className={styles.inputContainer}>
           <input
             className={styles.input}
             id={id}

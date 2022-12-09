@@ -4,7 +4,7 @@ import InputNumber from "./inputs/InputNumber";
 import InputDropDown from "./inputs/InputDropDown";
 import InputSignature from "./inputs/InputSignature";
 
-const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) => {
+const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
   return (
     <>
       {dataType == "text" && (
@@ -13,7 +13,6 @@ const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) 
           id={id}
           dataAccept={dataAccept}
           label={label}
-          width = {width}
           form={form}
           setForm={setForm}
         />
@@ -24,7 +23,6 @@ const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) 
           id={id}
           dataAccept={dataAccept}
           label={label}
-          width = {width}
           form={form}
           setForm={setForm}
         />
@@ -35,7 +33,6 @@ const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) 
           id={id}
           dataAccept={dataAccept}
           label={label}
-          width = {width}
           form={form}
           setForm={setForm}
         />
@@ -46,7 +43,6 @@ const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) 
           id={id}
           dataAccept={dataAccept}
           label={label}
-          width = {width}
           form={form}
           setForm={setForm}
         />
@@ -57,7 +53,6 @@ const Input = ({ text, id, dataType, dataAccept, label, width, form, setForm }) 
           id={id}
           dataAccept={dataAccept}
           label={label}
-          width = {width}
           form={form}
           setForm={setForm}
         />

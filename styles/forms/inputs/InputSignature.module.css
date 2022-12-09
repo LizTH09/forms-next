@@ -2,7 +2,7 @@
   border: 1px solid #bdbdbd;
   border-radius: 8px;
   margin: 15px 0;
-  height: 250px;
+  height: 230px;
 }
 
 .signatureContainer {
@@ -15,6 +15,27 @@
   position: absolute;
   bottom: 15px;
   right: 0;
+  display: flex;
+  gap: 15px;
+  margin: 10px;
+}
+
+.buttonCancel, .buttonSave{
+  all: unset;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.saveDisabled{
+  color: gray;
+}
+
+.cancel{
+  color: red;
+}
+.save{
+  color: rgb(68, 188, 68);
 }
 
 @media screen and (max-width: 360px) {

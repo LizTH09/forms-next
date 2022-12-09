@@ -5,12 +5,11 @@ const InputDropDown = ({
   id,
   dataAccept,
   label,
-  width,
   form,
   setForm,
 }) => {
   return (
-    <div className={styles.inputContainer} style={{ Width: width }}>
+    <div className={styles.inputContainer}>
       <select
         className={styles.input}
         id={id}

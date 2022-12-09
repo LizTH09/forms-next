@@ -6,12 +6,11 @@ const InputTel = ({
   dataType,
   dataAccept,
   label,
-  width,
   form,
   setForm,
 }) => {
   return (
-    <div className={styles.inputContainer} style={{ width: width }}>
+    <div className={styles.inputContainer}>
       <input
         className={styles.input}
         id={id}
