@@ -25,15 +25,37 @@ const initialValues = {
   company_information__secondary_city: "",
   company_information__secondary_state: "",
   company_information__secondary_zip_code: "",
-  change_officers__complete_name: "",
-  change_officers__position: "",
-  change_officers__action: "",
-  change_officers__signature: "",
+  change_officers__complete_name_officer1: "",
+  change_officers__position_officer1: "",
+  change_officers__action_officer1: "",
+  change_officers__signature_officer1: "",
+  change_officers__complete_name_officer2: "",
+  change_officers__position_officer2: "",
+  change_officers__action_officer2: "",
+  change_officers__signature_officer2: "",
+  change_officers__complete_name_officer3: "",
+  change_officers__position_officer3: "",
+  change_officers__action_officer3: "",
+  change_officers__signature_officer3: "",
+  change_officers__complete_name_officer4: "",
+  change_officers__position_officer4: "",
+  change_officers__action_officer4: "",
+  change_officers__signature_officer4: "",
+  change_officers__complete_name_officer5: "",
+  change_officers__position_officer5: "",
+  change_officers__action_officer5: "",
+  change_officers__signature_officer5: "",
   agent_register__complete_name: "",
   agent_register__address: "",
-  authorization__complete_name: "",
-  authorization__position: "",
-  authorization__signature: "",
+  authorization__complete_name_1: "",
+  authorization__position_1: "",
+  authorization__signature_1: "",
+  authorization__complete_name_2: "",
+  authorization__position_2: "",
+  authorization__signature_2: "",
+  authorization__complete_name_3: "",
+  authorization__position_3: "",
+  authorization__signature_3: "",
 };
 
 const Amendment = () => {
@@ -41,7 +63,7 @@ const Amendment = () => {
   const [language, setLanguage] = useState("en");
   const changeLanguage = () => {
     // fetch(`/utils/amendment/languages/${language}.json`)
-    fetch(`/api/languages/${language}`)
+    fetch(`/api/amendment/languages/${language}`)
       .then((response) => response.json())
       .then((data) => setText(data));
   };
@@ -76,6 +98,8 @@ const Amendment = () => {
           currentStep={currentStep}
           maxSteps={MAX_STEPS}
           text={text}
+          form={form}
+          template="template_z06210s"
         />
       </InputContainer>
     </FormContainer>

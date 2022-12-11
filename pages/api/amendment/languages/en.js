@@ -89,9 +89,10 @@ const handlerEnglish = (required, response) => {
       },
     },
     buttons: {
-      button1: "Back",
-      button2: "Next",
-      button3: "Send",
+      continue: "Next",
+      back: "Back",
+      send: "Send",
+      finish: "Finish",
     },
   });
 };

@@ -1,11 +1,13 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: min(1024px, calc(100% - 20px));
-    background: rgba(219, 219, 219, 0.537);
-    border-radius: 15px;
-    padding: 40px;
-    margin: 0 auto 50px;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: min(1024px, calc(100% - 20px));
+  background: rgba(242, 242, 242, 0.751);
+  border-radius: 15px;
+  box-shadow: -2px 1px 19px -2px rgb(195, 195, 195);
+  -webkit-box-shadow: -2px 1px 19px -2px rgb(195, 195, 195);
+  -moz-box-shadow: -2px 1px 19px -2px rgb(195, 195, 195);
+  padding: 40px;
+  margin: 0 auto 50px;
 }
-

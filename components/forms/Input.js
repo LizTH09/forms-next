@@ -3,6 +3,7 @@ import InputTel from "./inputs/InputTel";
 import InputNumber from "./inputs/InputNumber";
 import InputDropDown from "./inputs/InputDropDown";
 import InputSignature from "./inputs/InputSignature";
+import InputRadioButton from "./inputs/InputRadioButton";
 
 const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
   return (
@@ -39,6 +40,16 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
       )}
       {dataType == "dropDown" && (
         <InputDropDown
+          text={text}
+          id={id}
+          dataAccept={dataAccept}
+          label={label}
+          form={form}
+          setForm={setForm}
+        />
+      )}
+      {dataType == "radio" && (
+        <InputRadioButton
           text={text}
           id={id}
           dataAccept={dataAccept}

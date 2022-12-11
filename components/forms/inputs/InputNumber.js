@@ -15,7 +15,7 @@ const InputNumber = ({
         className={styles.input}
         id={id}
         value={form[id]}
-        type={dataType}
+        type="tel"
         placeholder=" "
         onChange={(e) => setForm({ ...form, [id]: e.target.value })}
       />
