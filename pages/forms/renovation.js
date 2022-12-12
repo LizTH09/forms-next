@@ -8,6 +8,9 @@ import Form from "/components/forms/Form";
 import inputs from "/public/utils/renovation/inputs.config";
 import FormHeader from "../../components/forms/formHeader";
 import InputContainer from "../../components/forms/InputContainer";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import PdfRenovation from "../../components/forms/pdf/PdfRenovation";
+import ButtonExport from "../../components/forms/pdf/ButtonExport";
 
 const initialValues = {
   renovation_company_information__company_name: "",
@@ -105,6 +108,14 @@ const Renovation = () => {
           form={form}
           template="template_z06210s"
         />
+        {currentStep == MAX_STEPS && (
+          <PDFDownloadLink
+            document={<PdfRenovation text={text} form={form} date={date} />}
+            fileName={`renovation.pdf`}
+          >
+            <ButtonExport text={text?.buttons?.download} />
+          </PDFDownloadLink>
+        )}
       </InputContainer>
     </FormContainer>
   );

@@ -89,10 +89,10 @@ const handlerEnglish = (required, response) => {
       },
     },
     buttons: {
-      continue: "Next",
-      back: "Back",
-      send: "Send",
-      finish: "Finish",
+      continue: "Siguiente",
+      back: "Volver",
+      send: "Enviar",
+      download: "Descargar",
     },
   });
 };
