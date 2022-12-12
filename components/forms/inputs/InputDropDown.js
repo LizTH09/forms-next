@@ -7,6 +7,7 @@ const InputDropDown = ({
   label,
   form,
   setForm,
+  required,
 }) => {
   return (
     <div className={styles.inputContainer}>
@@ -15,6 +16,7 @@ const InputDropDown = ({
         id={id}
         placeholder=" "
         value={form[id]}
+        required={required}
         onChange={(e) => setForm({ ...form, [id]: e.target.value })}
       >
         {text.options[label].map((value, index) => (

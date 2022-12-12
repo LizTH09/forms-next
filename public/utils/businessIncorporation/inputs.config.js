@@ -290,7 +290,7 @@ const inputs = [
         id: "applicant_information__ssn_itin",
         dataType: "text",
         dataAccept: "string",
-        label: "label1",
+        label: "label2",
       },
     ],
   },

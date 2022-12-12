@@ -1,0 +1,27 @@
+.button, .buttonAlternative{
+    all: unset;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border: 1.5px solid #25c89c;
+    border-radius: 5px;
+    color: #25c89c;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button{
+    background-color: #25c89c;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    .button, .buttonAlternative{
+        width: 100%;
+    }
+
+    .button{
+        margin-top: 20px;
+    }
+}

@@ -108,7 +108,7 @@ const handlerSpanish = (required, response) => {
       continue: "Siguiente",
       back: "Atrás",
       send: "Enviar",
-      finish: "Finalizar",
+      download: "Download",
     },
   });
 };

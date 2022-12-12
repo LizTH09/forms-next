@@ -8,6 +8,7 @@ const InputRadioButton = ({
   label,
   form,
   setForm,
+  required
 }) => {
   return (
     <div className={styles.container}>

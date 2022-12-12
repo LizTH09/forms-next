@@ -2,7 +2,14 @@ import { useEffect } from "react";
 import Input from "./Input";
 import styles from "/styles/forms/Form.module.css";
 
-const Form = ({ inputs, text, currentStep, form, setForm }) => {
+const Form = ({
+  inputs,
+  text,
+  currentStep,
+  form,
+  setForm,
+  required = false,
+}) => {
   return (
     <>
       {text?.steps && (
@@ -16,6 +23,7 @@ const Form = ({ inputs, text, currentStep, form, setForm }) => {
               label={input.label}
               form={form}
               setForm={setForm}
+              required={required}
             />
           ))}
         </div>

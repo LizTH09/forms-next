@@ -8,6 +8,9 @@ import Form from "/components/forms/Form";
 import inputs from "/public/utils/amendment/inputs.config";
 import FormHeader from "../../components/forms/formHeader";
 import InputContainer from "../../components/forms/InputContainer";
+import { PDFDownloadLink, Text } from "@react-pdf/renderer";
+import ButtonExport from "../../components/forms/pdf/ButtonExport";
+import PdfAmendment from "../../components/forms/pdf/PdfAmendment";
 
 const initialValues = {
   company_information__company_name: "",
@@ -100,7 +103,22 @@ const Amendment = () => {
           text={text}
           form={form}
           template="template_z06210s"
+          date={date.toLocaleDateString()}
         />
+        {currentStep == MAX_STEPS && (
+          <PDFDownloadLink
+            document={
+              <PdfAmendment
+                text={text}
+                form={form}
+                date={date}
+              />
+            }
+            fileName={`amendment.pdf`}
+          >
+            <ButtonExport text={text?.buttons?.download} />
+          </PDFDownloadLink>
+        )}
       </InputContainer>
     </FormContainer>
   );

@@ -21,6 +21,10 @@ const InputSignature = ({ text, id, dataAccept, label, form, setForm }) => {
       setDisableSave(false);
       sigCanvas?.current?.on();
     }
+    setForm({
+      ...form,
+      [id]: "",
+    });
   };
   return (
     <div className={styles.signatureContainer}>

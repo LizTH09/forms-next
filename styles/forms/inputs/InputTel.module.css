@@ -5,6 +5,7 @@
 }
 
 .input{
+  /* all: unset; */
   position: absolute;
   top: 0;
   left: 0;
@@ -17,6 +18,10 @@
   padding: 0 0 0 1rem;
   background: none;
   z-index: 1;
+}
+
+.input input{
+  all: unset;
 }
 
 .inputLabel{

@@ -92,7 +92,7 @@ const handlerEnglish = (required, response) => {
       continue: "Next",
       back: "Back",
       send: "Send",
-      finish: "Finish",
+      download: "Download",
     },
   });
 };

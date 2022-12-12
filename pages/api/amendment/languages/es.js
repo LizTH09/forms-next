@@ -92,7 +92,7 @@ const handlerSpanish = (required, response) => {
       continue: "Siguiente",
       back: "Volver",
       send: "Enviar",
-      finish: "Finalizar",
+      download: "Descargar",
     },
   });
 };

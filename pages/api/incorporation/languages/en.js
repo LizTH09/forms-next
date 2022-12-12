@@ -42,8 +42,8 @@ const handlerEnglish = (required, response) => {
         },
       },
       step3: {
-        title: "Officer(s) description",
-        description: "Officer(s) description extra",
+        title: "Officer(s) Information",
+        description: "Officer(s) Information extra",
         labels: {
           label1: "Complete Name",
           label2: "Email",
@@ -109,7 +109,7 @@ const handlerEnglish = (required, response) => {
       continue: "Next",
       back: "Back",
       send: "Send",
-      finish: "Finish",
+      download: "Download",
     },
   });
 };

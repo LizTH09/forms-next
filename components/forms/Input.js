@@ -5,7 +5,16 @@ import InputDropDown from "./inputs/InputDropDown";
 import InputSignature from "./inputs/InputSignature";
 import InputRadioButton from "./inputs/InputRadioButton";
 
-const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
+const Input = ({
+  text,
+  id,
+  dataType,
+  dataAccept,
+  label,
+  form,
+  setForm,
+  required,
+}) => {
   return (
     <>
       {dataType == "text" && (
@@ -16,6 +25,7 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
           label={label}
           form={form}
           setForm={setForm}
+          required={required}
         />
       )}
       {dataType == "tel" && (
@@ -26,6 +36,7 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
           label={label}
           form={form}
           setForm={setForm}
+          required={required}
         />
       )}
       {dataType == "number" && (
@@ -36,6 +47,7 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
           label={label}
           form={form}
           setForm={setForm}
+          required={required}
         />
       )}
       {dataType == "dropDown" && (
@@ -46,6 +58,7 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
           label={label}
           form={form}
           setForm={setForm}
+          required={required}
         />
       )}
       {dataType == "radio" && (
@@ -56,6 +69,7 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
           label={label}
           form={form}
           setForm={setForm}
+          required={required}
         />
       )}
       {dataType == "signature" && (
@@ -66,10 +80,18 @@ const Input = ({ text, id, dataType, dataAccept, label, form, setForm }) => {
           label={label}
           form={form}
           setForm={setForm}
+          required={required}
         />
       )}
       {dataType == "newSection" && (
-        <div style={{width: "100%", height: "2px", background: "gray", margin: "20px 0"}}></div>
+        <div
+          style={{
+            width: "100%",
+            height: "2px",
+            background: "gray",
+            margin: "20px 0",
+          }}
+        ></div>
       )}
     </>
   );

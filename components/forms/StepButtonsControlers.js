@@ -1,5 +1,8 @@
 import Button from "./Button";
 import styles from "../../styles/forms/StepButtonsControlers.module.css";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import Pdf from "./pdf/PdfAmendment";
+import ButtonExport from "./pdf/ButtonExport";
 
 const StepButtonsControlers = ({
   setCurrentStep,
@@ -8,6 +11,7 @@ const StepButtonsControlers = ({
   text,
   form,
   template,
+  date,
 }) => {
   return (
     <div className={styles.buttonsContainer}>
@@ -26,6 +30,7 @@ const StepButtonsControlers = ({
           currentStep={currentStep}
         />
       )}
+      
       {currentStep == maxSteps && (
         <Button
           text={text?.buttons?.send}

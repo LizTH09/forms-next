@@ -1,6 +1,14 @@
 import styles from "/styles/forms/inputs/InputText.module.css";
 
-const InputText = ({ text, id, dataAccept, label, form, setForm }) => {
+const InputText = ({
+  text,
+  id,
+  dataAccept,
+  label,
+  form,
+  setForm,
+  required,
+}) => {
   return (
     <>
       {text && (
@@ -10,6 +18,7 @@ const InputText = ({ text, id, dataAccept, label, form, setForm }) => {
             id={id}
             value={form[id]}
             placeholder=" "
+            required={required}
             onChange={(e) => setForm({ ...form, [id]: e.target.value })}
           ></input>
           <label className={styles.inputLabel}>{text[label]}</label>

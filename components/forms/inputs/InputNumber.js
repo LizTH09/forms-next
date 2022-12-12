@@ -8,6 +8,7 @@ const InputNumber = ({
   label,
   form,
   setForm,
+  required,
 }) => {
   return (
     <div className={styles.inputContainer}>
@@ -15,8 +16,9 @@ const InputNumber = ({
         className={styles.input}
         id={id}
         value={form[id]}
-        type="tel"
+        type="number"
         placeholder=" "
+        required={required}
         onChange={(e) => setForm({ ...form, [id]: e.target.value })}
       />
       <label className={styles.inputLabel}>{text[label]}</label>
