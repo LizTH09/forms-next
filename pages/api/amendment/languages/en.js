@@ -54,7 +54,7 @@ const handlerEnglish = (required, response) => {
             "Member (MBR)",
             "Shareholder",
           ],
-          label3: ["Add", "Remove"],
+          label3: ["Select One", "Add", "Remove"],
         },
       },
       step3: {

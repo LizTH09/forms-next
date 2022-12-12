@@ -20,6 +20,7 @@
     background-color: #25c89c;
     color: white;
     position: absolute;
+    transform: translateY(-60px);
 }
 
 @media screen and (max-width: 480px) {

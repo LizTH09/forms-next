@@ -54,7 +54,7 @@ const handlerSpanish = (required, response) => {
             "Miembro (MBR)",
             "Accionista",
           ],
-          label3: ["Añadir", "Quitar"],
+          label3: ["Seleccione uno", "Añadir", "Quitar"],
         },
       },
       step3: {
