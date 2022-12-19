@@ -46,19 +46,27 @@ const PdfRenovation = ({
       width: "90vh",
       display: "flex",
       flexDirection: "column",
+      // backgroundColor: "red",
+      position: "relative",
     },
     body: {
       marginLeft: 61,
-      marginRight: 96,
+      marginRight: 80,
       marginVertical: 15,
       marginBottom: 40,
     },
     title: {
+      // backgroundColor: "blue",
+      position: "absolute",
+      left: 0,
+      top: "-60px",
       fontSize: 20,
+      width: "65%",
       textTransform: "uppercase",
-      textAlign: "center",
+      textAlign: "left",
       fontWeight: "bold",
-      marginVertical: 30,
+      display: "flex",
+      flexWrap: "wrap",
     },
     line: {
       width: "100%",
@@ -70,7 +78,10 @@ const PdfRenovation = ({
       color: "#2CAF95",
       fontWeight: "semibold",
     },
-    blackLetter: { fontWeight: "semibold" },
+    blackLetter: {
+      fontWeight: "semibold",
+      textAlign: "center",
+    },
     personalInformation: {
       display: "flex",
       flexDirection: "row",
@@ -81,6 +92,27 @@ const PdfRenovation = ({
       fontSize: 16,
       fontWeight: "semibold",
       color: "#2CAF95",
+    },
+    column: {
+      display: "flex",
+      flexDirection: "column",
+      width: "530px",
+      gap: "8px",
+    },
+    textColumn: {
+      // marginLeft: "20px",
+      paddingTop: 5,
+      paddingBottom: 10,
+    },
+    twoColumn: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+    },
+    inputInformation: {
+      fontWeight: "semibold",
+      paddingVertical: 5,
+      width: "100%",
     },
     text: {
       fontSize: 12,
@@ -95,31 +127,44 @@ const PdfRenovation = ({
       justifyContent: "center",
       alignItems: "center",
       marginHorizontal: "20px",
-      marginVertical: 5,
       color: "#9f9f9f",
     },
     textElement: {
-      paddingVertical: 5,
+      paddingVertical: 10,
     },
     lineBlue: {
       width: "30%",
       height: 2,
       borderRadius: 5,
       backgroundColor: "#2CAF95",
-      marginVertical: 15,
+      marginTop: 15,
     },
     signatureContainer: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      marginHorizontal: 20,
-      marginVertical: 10,
+      marginRight: "30px",
+      height: "80px",
+      width: "60px",
     },
     signatureLine: {
       height: 1,
-      minWidth: "120px",
+      width: 100,
       backgroundColor: "black",
       marginVertical: 5,
+    },
+    photoContainer: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+      width: "80px",
+      height: "60px",
+      marginRight: "10px",
+    },
+    photo: {
+      borderRadius: "15px",
+      height: "100%",
+      // maxWidth: "120px",
     },
     image: {
       width: 80,
@@ -135,121 +180,121 @@ const PdfRenovation = ({
           <PdfHeader />
           <View style={styles.body}>
             <Text style={styles.title}>{text.title}</Text>
-          </View>
-          ////////////////////////////////STEP1/////////////////////////////////
-          <View
-            style={[
-              styles.text,
-              {
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-              },
-            ]}
-          >
-            <View>
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label1} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__company_name}
-              </Text>
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label2} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__tax_id}
-              </Text>
-              //////////////////////////
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label3} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__phone}
-              </Text>
-              /////////////////////////
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label4} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__email}
-              </Text>
-              /////////////////////////
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label5} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__document_number}
-              </Text>
-              /////////////////////////
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label6} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__type_organization}
-              </Text>
-              /////////////////////////
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label7} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__new_name}
-              </Text>
-              /////////////////////////
-              <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                {text.steps.step1.labels.label8} :{" "}
-              </Text>
-              <Text
-                style={{
-                  paddingTop: 5,
-                  paddingBottom: 10,
-                  paddingHorizontal: 15,
-                }}
-              >
-                {form.renovation_company_information__principal_address}
-              </Text>
+            ////////////////////////////////STEP1/////////////////////////////////
+            <View
+              style={[
+                styles.text,
+                {
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                },
+              ]}
+            >
+              <View>
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label1} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__company_name}
+                </Text>
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label2} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__tax_id}
+                </Text>
+                //////////////////////////
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label3} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__phone}
+                </Text>
+                /////////////////////////
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label4} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__email}
+                </Text>
+                /////////////////////////
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label5} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__document_number}
+                </Text>
+                /////////////////////////
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label6} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__type_organization}
+                </Text>
+                /////////////////////////
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label7} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__new_name}
+                </Text>
+                /////////////////////////
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {text.steps.step1.labels.label8} :{" "}
+                </Text>
+                <Text
+                  style={{
+                    paddingTop: 5,
+                    paddingBottom: 10,
+                    paddingHorizontal: 15,
+                  }}
+                >
+                  {form.renovation_company_information__principal_address}
+                </Text>
+              </View>
             </View>
           </View>
         </View>
@@ -279,11 +324,20 @@ const PdfRenovation = ({
                     {
                       display: "flex",
                       flexDirection: "row",
-                      gap: "40px",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      gap: "10px",
                     },
                   ]}
                 >
-                  /////////////////////////
+                  {form.officers_update__photo_officer1 && (
+                    <View style={styles.photoContainer}>
+                      <Image
+                        src={form.officers_update__photo_officer1}
+                        style={styles.photo}
+                      />
+                    </View>
+                  )}
                   <View
                     style={{
                       display: "flex",
@@ -326,19 +380,7 @@ const PdfRenovation = ({
                           {form.officers_update__action_officer1}
                         </Text>
                       </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__position_officer1}
-                        </Text>
-                      </View>
                     </View>
-
-                    <View style={styles.lineBlue}></View>
                   </View>
                   <View
                     style={[
@@ -355,7 +397,6 @@ const PdfRenovation = ({
                       {form.officers_update__position_officer1}
                     </Text>
                   </View>
-                  /////////////////////////
                 </View>
               )}
               ///////////////////////////////////////////
@@ -366,10 +407,20 @@ const PdfRenovation = ({
                     {
                       display: "flex",
                       flexDirection: "row",
-                      gap: "40px",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      gap: "10px",
                     },
                   ]}
                 >
+                  {form.officers_update__photo_officer2 && (
+                    <View style={styles.photoContainer}>
+                      <Image
+                        src={form.officers_update__photo_officer2}
+                        style={styles.photo}
+                      />
+                    </View>
+                  )}
                   <View
                     style={{
                       display: "flex",
@@ -399,7 +450,7 @@ const PdfRenovation = ({
                             { fontSize: 12, fontWeight: "semibold" },
                           ]}
                         >
-                          {form.officers_update__phone_officer2}
+                          {form.officers_update__phone_officer1}
                         </Text>
                       </View>
                       <View style={{ display: "flex", flexDirection: "row" }}>
@@ -412,19 +463,7 @@ const PdfRenovation = ({
                           {form.officers_update__action_officer2}
                         </Text>
                       </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__position_officer2}
-                        </Text>
-                      </View>
                     </View>
-
-                    <View style={styles.lineBlue}></View>
                   </View>
                   <View
                     style={[
@@ -451,10 +490,20 @@ const PdfRenovation = ({
                     {
                       display: "flex",
                       flexDirection: "row",
-                      gap: "40px",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      gap: "10px",
                     },
                   ]}
                 >
+                  {form.officers_update__photo_officer3 && (
+                    <View style={styles.photoContainer}>
+                      <Image
+                        src={form.officers_update__photo_officer3}
+                        style={styles.photo}
+                      />
+                    </View>
+                  )}
                   <View
                     style={{
                       display: "flex",
@@ -497,19 +546,7 @@ const PdfRenovation = ({
                           {form.officers_update__action_officer3}
                         </Text>
                       </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__position_officer3}
-                        </Text>
-                      </View>
                     </View>
-
-                    <View style={styles.lineBlue}></View>
                   </View>
                   <View
                     style={[
@@ -536,10 +573,20 @@ const PdfRenovation = ({
                     {
                       display: "flex",
                       flexDirection: "row",
-                      gap: "40px",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      gap: "10px",
                     },
                   ]}
                 >
+                  {form.officers_update__photo_officer4 && (
+                    <View style={styles.photoContainer}>
+                      <Image
+                        src={form.officers_update__photo_officer4}
+                        style={styles.photo}
+                      />
+                    </View>
+                  )}
                   <View
                     style={{
                       display: "flex",
@@ -582,19 +629,7 @@ const PdfRenovation = ({
                           {form.officers_update__action_officer4}
                         </Text>
                       </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__position_officer4}
-                        </Text>
-                      </View>
                     </View>
-
-                    <View style={styles.lineBlue}></View>
                   </View>
                   <View
                     style={[
@@ -621,10 +656,20 @@ const PdfRenovation = ({
                     {
                       display: "flex",
                       flexDirection: "row",
-                      gap: "40px",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      gap: "10px",
                     },
                   ]}
                 >
+                  {form.officers_update__photo_officer5 && (
+                    <View style={styles.photoContainer}>
+                      <Image
+                        src={form.officers_update__photo_officer5}
+                        style={styles.photo}
+                      />
+                    </View>
+                  )}
                   <View
                     style={{
                       display: "flex",
@@ -667,19 +712,7 @@ const PdfRenovation = ({
                           {form.officers_update__action_officer5}
                         </Text>
                       </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetters,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__position_officer5}
-                        </Text>
-                      </View>
                     </View>
-
-                    <View style={styles.lineBlue}></View>
                   </View>
                   <View
                     style={[
@@ -757,20 +790,19 @@ const PdfRenovation = ({
                 </Text>
               </View>
               <Text style={styles.subTitle}>{text.steps.step4.title}</Text>
-
+              <View style={styles.line}></View>
               {form.renovation_authorization__signature_1 && (
                 <View
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
+                    alignItems: "center",
                   }}
                 >
                   <View
                     style={[
                       styles.signatureContainer,
-                      { width: 90, height: 70 },
+                      { width: 90, height: 70, marginBottom: 30 },
                     ]}
                   >
                     <Image
@@ -778,81 +810,71 @@ const PdfRenovation = ({
                       style={styles.image}
                     />
                     <View style={styles.signatureLine}></View>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {form.renovation_authorization__complete_name_1}
-                    </Text>
                     <Text style={{ fontSize: 10 }}>
                       {form.renovation_authorization__position_1}
                     </Text>
                   </View>
+                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                    {form.renovation_authorization__complete_name_1}
+                  </Text>
                 </View>
               )}
-              <Text></Text>
-              {form.renovation_authorization__signature_2 && (
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
                 <View
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
+                  style={[
+                    styles.signatureContainer,
+                    { width: 90, height: 70, marginBottom: 30 },
+                  ]}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
+                  {form.renovation_authorization__signature_2 && (
                     <Image
                       src={form.renovation_authorization__signature_2}
                       style={styles.image}
                     />
-                    <View style={styles.signatureLine}></View>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {form.renovation_authorization__complete_name_2}
-                    </Text>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.renovation_authorization__position_2}
-                    </Text>
-                  </View>
+                  )}
+                  <View style={styles.signatureLine}></View>
+                  <Text style={{ fontSize: 10 }}>
+                    {form.renovation_authorization__position_2}
+                  </Text>
                 </View>
-              )}
-              <Text></Text>
-              {form.renovation_authorization__signature_3 && (
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {form.renovation_authorization__complete_name_2}
+                </Text>
+              </View>
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
                 <View
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
+                  style={[
+                    styles.signatureContainer,
+                    { width: 90, height: 70, marginBottom: 30 },
+                  ]}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70, marginTop: "20px" },
-                    ]}
-                  >
+                  {form.renovation_authorization__signature_3 && (
                     <Image
                       src={form.renovation_authorization__signature_3}
                       style={styles.image}
                     />
-                    <View style={styles.signatureLine}></View>
-                    <Text
-                      style={{ fontWeight: "semibold", padding: "10px" }}
-                    >
-                      {form.renovation_authorization__complete_name_3}
-                    </Text>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.renovation_authorization__position_3}
-                    </Text>
-                  </View>
+                  )}
+                  <View style={styles.signatureLine}></View>
+                  <Text style={{ fontSize: 10 }}>
+                    {form.renovation_authorization__position_3}
+                  </Text>
                 </View>
-              )}
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {form.renovation_authorization__complete_name_3}
+                </Text>
+              </View>
             </View>
           </View>
         </View>

@@ -70,7 +70,6 @@ const PdfAmendment = ({ text, form, date }) => {
     },
     blackLetter: {
       fontWeight: "semibold",
-      width: "120px",
       textAlign: "center",
     },
     personalInformation: {
@@ -118,7 +117,6 @@ const PdfAmendment = ({ text, form, date }) => {
       justifyContent: "center",
       alignItems: "center",
       marginHorizontal: "20px",
-      marginVertical: 10,
       color: "#9f9f9f",
     },
     textElement: {
@@ -129,13 +127,15 @@ const PdfAmendment = ({ text, form, date }) => {
       height: 2,
       borderRadius: 5,
       backgroundColor: "#2CAF95",
-      marginTop: 20,
+      marginTop: 15,
     },
     signatureContainer: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      margingTop: "10px"
+      marginRight: "30px",
+      height: "80px",
+      width: "60px",
     },
     signatureLine: {
       height: 1,
@@ -147,8 +147,8 @@ const PdfAmendment = ({ text, form, date }) => {
       display: "flex",
       justifyContent: "center",
       alignContent: "center",
-      width: "100px",
-      height: "80px",
+      width: "80px",
+      height: "60px",
       marginRight: "10px",
     },
     photo: {
@@ -395,7 +395,7 @@ const PdfAmendment = ({ text, form, date }) => {
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        height: "100%"
+                        height: "100%",
                       }}
                     >
                       <Text
@@ -481,7 +481,7 @@ const PdfAmendment = ({ text, form, date }) => {
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        height: "100%"
+                        height: "100%",
                       }}
                     >
                       <Text
@@ -567,7 +567,7 @@ const PdfAmendment = ({ text, form, date }) => {
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        height: "100%"
+                        height: "100%",
                       }}
                     >
                       <Text
@@ -653,7 +653,7 @@ const PdfAmendment = ({ text, form, date }) => {
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        height: "100%"
+                        height: "100%",
                       }}
                     >
                       <Text
@@ -739,7 +739,7 @@ const PdfAmendment = ({ text, form, date }) => {
                       style={{
                         display: "flex",
                         flexDirection: "column",
-                        height: "100%"
+                        height: "100%",
                       }}
                     >
                       <Text
@@ -844,96 +844,103 @@ const PdfAmendment = ({ text, form, date }) => {
                 </Text>
               </View>
               <Text style={styles.subTitle}>{text.steps.step4.title}</Text>
-
-              {form.authorization__signature_1 && (
-                <View
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
-                >
+              <View style={styles.line}></View>
+              <View
+                style={{
+                  width: "100%",
+                  marginLeft: 30,
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                {form.authorization__signature_1 && (
                   <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
                   >
-                    <Image
-                      src={form.authorization__signature_1}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70, marginBottom: 30 },
+                      ]}
+                    >
+                      <Image
+                        src={form.authorization__signature_1}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.authorization__position_1}
+                      </Text>
+                    </View>
                     <Text style={styles.inputInformation}>
                       {form.authorization__complete_name_1}
                     </Text>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.authorization__position_1}
-                    </Text>
                   </View>
-                </View>
-              )}
-              <Text></Text>
-              {form.authorization__signature_2 && (
-                <View
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
-                >
+                )}
+                <Text></Text>
+                {form.authorization__signature_2 && (
                   <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
                   >
-                    <Image
-                      src={form.authorization__signature_2}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70, marginBottom: 30 },
+                      ]}
+                    >
+                      <Image
+                        src={form.authorization__signature_2}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.authorization__position_2}
+                      </Text>
+                    </View>
                     <Text style={styles.inputInformation}>
                       {form.authorization__complete_name_2}
                     </Text>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.authorization__position_2}
-                    </Text>
                   </View>
-                </View>
-              )}
-              <Text></Text>
-              {form.authorization__signature_3 && (
-                <View
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
-                >
+                )}
+                <Text></Text>
+                {form.authorization__signature_3 && (
                   <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70, marginTop: "20px" },
-                    ]}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
                   >
-                    <Image
-                      src={form.authorization__signature_3}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontWeight: "semibold", padding: "10px" }}>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70, marginBottom: 30 },
+                      ]}
+                    >
+                      <Image
+                        src={form.authorization__signature_3}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.authorization__position_3}
+                      </Text>
+                    </View>
+                    <Text style={styles.inputInformation}>
                       {form.authorization__complete_name_3}
                     </Text>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.authorization__position_3}
-                    </Text>
                   </View>
-                </View>
-              )}
+                )}
+              </View>
+              <Text></Text>
             </View>
           </View>
         </View>

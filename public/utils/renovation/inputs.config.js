@@ -118,7 +118,7 @@ const inputs = [
       {
         id: "officers_update__photo_officer1",
         dataType: "attachment",
-        dataAccept: "string",
+        dataAccept: "image/*",
         label: "label1",
       },
       {
@@ -154,7 +154,7 @@ const inputs = [
       {
         id: "officers_update__photo_officer2",
         dataType: "attachment",
-        dataAccept: "string",
+        dataAccept: "image/*",
         label: "label1",
       },
       {
@@ -190,7 +190,7 @@ const inputs = [
       {
         id: "officers_update__photo_officer3",
         dataType: "attachment",
-        dataAccept: "string",
+        dataAccept: "image/*",
         label: "label1",
       },
       {
@@ -226,7 +226,7 @@ const inputs = [
       {
         id: "officers_update__photo_officer4",
         dataType: "attachment",
-        dataAccept: "string",
+        dataAccept: "image/*",
         label: "label1",
       },
       {
@@ -260,9 +260,9 @@ const inputs = [
         label: "label4",
       },
       {
-        id: "officers_update__photo_officer4",
+        id: "officers_update__photo_officer5",
         dataType: "attachment",
-        dataAccept: "string",
+        dataAccept: "image/*",
         label: "label1",
       },
       {
