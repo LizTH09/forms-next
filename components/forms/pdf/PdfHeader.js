@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet, Svg, Path } from "@react-pdf/renderer";
+import { Text, View, StyleSheet, Svg, Path, Image } from "@react-pdf/renderer";
+// import logo from "../../../public/infoLogo.jpg";
 const styles = StyleSheet.create({
   contactBox: {
     marginTop: "6vh",
@@ -15,9 +16,11 @@ const styles = StyleSheet.create({
     fontSize: 10,
     justifyContent: "center",
     alignItems: "flex-end",
+    // height: "50px",
+    width: "40%",
   },
   contactInfo: {
-    height: 30,
+    height: "3vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-end",
@@ -25,10 +28,10 @@ const styles = StyleSheet.create({
   contactInfoCardDesign: {
     display: "flex",
     flexDirection: "column",
-    height: "12vh",
+    height: "9vh",
   },
   contactInfoCardDesignIcons: {
-    height: 35,
+    height: "3vh",
     width: 25,
     display: "flex",
     justifyContent: "center",
@@ -40,7 +43,9 @@ const PdfHeader = () => {
   return (
     <View style={styles.contactBox} wrap={false}>
       <View style={styles.contactInfoCard} wrap={false}>
-        <View style={styles.contactInfo}>
+        <Image src="/assets/infoLogo.jpg" source="Info Logo" />
+
+        {/* <View style={styles.contactInfo}>
           <Text>Tel: 754-333-1797</Text>
         </View>
         <View style={styles.contactInfo}>
@@ -48,9 +53,9 @@ const PdfHeader = () => {
         </View>
         <View style={styles.contactInfo}>
           <Text>Email: INREP101 @OUTLOOK .COM </Text>
-        </View>
+        </View> */}
       </View>
-      <View style={styles.contactInfoCardDesign} wrap={false}>
+      {/* <View style={styles.contactInfoCardDesign} wrap={false}>
         <View
           style={[
             styles.contactInfoCardDesignIcons,
@@ -99,7 +104,7 @@ const PdfHeader = () => {
             />
           </Svg>
         </View>
-      </View>
+      </View> */}
     </View>
   );
 };

@@ -131,11 +131,18 @@ const inputs = [
         required: true,
       },
       {
+        id: "change_officers__photo_officer1",
+        dataType: "attachment",
+        dataAccept: "image/*",
+        required: true,
+      },
+      {
         id: "change_officers__signature_officer1",
         dataType: "signature",
         dataAccept: "string",
         required: true,
       },
+
       { dataType: "newSection" },
       {
         id: "change_officers__complete_name_officer2",
@@ -154,6 +161,12 @@ const inputs = [
         dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
+      },
+      {
+        id: "change_officers__photo_officer2",
+        dataType: "attachment",
+        dataAccept: "image/*",
+        required: true,
       },
       {
         id: "change_officers__signature_officer2",
@@ -180,6 +193,12 @@ const inputs = [
         label: "label3",
       },
       {
+        id: "change_officers__photo_officer3",
+        dataType: "attachment",
+        dataAccept: "image/*",
+        required: true,
+      },
+      {
         id: "change_officers__signature_officer3",
         dataType: "signature",
         dataAccept: "string",
@@ -204,6 +223,12 @@ const inputs = [
         label: "label3",
       },
       {
+        id: "change_officers__photo_officer4",
+        dataType: "attachment",
+        dataAccept: "image/*",
+        required: true,
+      },
+      {
         id: "change_officers__signature_officer4",
         dataType: "signature",
         dataAccept: "string",
@@ -226,6 +251,13 @@ const inputs = [
         dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
+      },
+      {
+        id: "change_officers__photo_officer5",
+        dataType: "attachment",
+        dataAccept: "image/*",
+        label: "label5",
+        required: true,
       },
       {
         id: "change_officers__signature_officer5",
@@ -261,6 +293,12 @@ const inputs = [
         label: "label1",
         required: true,
       },
+      // {
+      //   id: "authorization__document_1",
+      //   dataType: "number",
+      //   dataAccept: "string",
+      //   label: "label4",
+      // },
       {
         id: "authorization__position_1",
         dataType: "dropDown",
@@ -268,6 +306,13 @@ const inputs = [
         label: "label3",
         required: true,
       },
+      // {
+      //   id: "authorization__photo_1",
+      //   dataType: "attachment",
+      //   dataAccept: "string",
+      //   label: "label5",
+      //   required: true,
+      // },
       {
         id: "authorization__signature_1",
         dataType: "signature",
@@ -282,12 +327,25 @@ const inputs = [
         dataAccept: "string",
         label: "label1",
       },
+      // {
+      //   id: "authorization__document_2",
+      //   dataType: "number",
+      //   dataAccept: "string",
+      //   label: "label4",
+      // },
       {
         id: "authorization__position_2",
         dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
       },
+      // {
+      //   id: "authorization__photo_2",
+      //   dataType: "attachment",
+      //   dataAccept: "string",
+      //   label: "label5",
+      //   required: true,
+      // },
       {
         id: "authorization__signature_2",
         dataType: "signature",
@@ -301,12 +359,25 @@ const inputs = [
         dataAccept: "string",
         label: "label1",
       },
+      // {
+      //   id: "authorization__document_3",
+      //   dataType: "number",
+      //   dataAccept: "string",
+      //   label: "label4",
+      // },
       {
         id: "authorization__position_3",
         dataType: "dropDown",
         dataAccept: "string",
         label: "label3",
       },
+      // {
+      //   id: "authorization__photo_3",
+      //   dataType: "attachment",
+      //   dataAccept: "string",
+      //   label: "label5",
+      //   required: true,
+      // },
       {
         id: "authorization__signature_3",
         dataType: "signature",

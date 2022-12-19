@@ -41,6 +41,7 @@ const handlerEnglish = (required, response) => {
           label2: "Position",
           label3: "Action",
           label4: "Signature",
+          label5: "Add Photo",
         },
         options: {
           label2: [
@@ -72,6 +73,7 @@ const handlerEnglish = (required, response) => {
           label1: "Complete Name",
           lable2: "Authorization Signature",
           label3: "Position",
+          label4: "Document #",
         },
         options: {
           label3: [

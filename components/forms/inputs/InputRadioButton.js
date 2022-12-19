@@ -22,6 +22,7 @@ const InputRadioButton = ({
               id={id}
               name={id}
               value={index && value}
+              checked={form[id] == value}
               onChange={(e) => setForm({ ...form, [id]: value })}
             />
             <label className={styles.label} htmlFor={id}>

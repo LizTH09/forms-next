@@ -1,0 +1,96 @@
+/* .container {
+  width: 48%;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: rgba(242, 242, 242, 0.751);
+  border-radius: 10px;
+  border: 1px solid #555;
+  display: flex;
+  position: relative;
+} */
+.inputContainer {
+  width: 50%;
+  height: 48px;
+  max-width: 100%;
+  color: gray;
+  padding: 5px;
+  background: rgba(242, 242, 242, 0.751);
+  border-radius: 10px;
+  border: 1px solid #555;
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+  position: relative;
+}
+
+.fileName{
+  position: absolute;
+  background: rgb(242, 242, 242);
+  width: 50%;
+}
+
+.input::file-selector-button {
+  width: 40%;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  border: none;
+  background: #25c89c;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.input::file-selector-button:hover {
+  background: #1fab85;
+}
+
+.imageContainer {
+  width: 48%;
+  height: 230px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: rgba(242, 242, 242, 0.751);
+  border-radius: 10px;
+  border: 1.5px dashed gray;
+  display: flex;
+  position: relative;
+}
+
+.inputPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.inputLabel {
+  position: absolute;
+  padding: 0 0.25rem;
+  /* background-color: #ececec; */
+  color: gray;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: 0.3s;
+  top: -0.5rem;
+  left: 0.8rem;
+  color: gray;
+  background-color: rgba(249, 249, 249, 0.916);
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 5;
+}
+
+@media screen and (max-width: 1024px) {
+  .imageContainer{
+    width: 45%;
+  }
+}

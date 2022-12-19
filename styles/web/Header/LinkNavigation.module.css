@@ -1,0 +1,18 @@
+.navigation {
+  /* display: inline-block; */
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+}
+
+.navigation::after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all 0.5s;
+}
+.navigation:hover:after {
+  width: 100%;
+  background: rgb(50, 50, 50);
+}

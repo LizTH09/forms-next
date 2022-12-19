@@ -116,6 +116,12 @@ const inputs = [
         label: "label4",
       },
       {
+        id: "officers_update__photo_officer1",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
+      {
         id: "officers_update__signature_officer1",
         dataType: "signature",
         dataAccept: "string",
@@ -144,6 +150,12 @@ const inputs = [
         dataType: "dropDown",
         dataAccept: "string",
         label: "label4",
+      },
+      {
+        id: "officers_update__photo_officer2",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
       },
       {
         id: "officers_update__signature_officer2",
@@ -176,6 +188,12 @@ const inputs = [
         label: "label4",
       },
       {
+        id: "officers_update__photo_officer3",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
+      {
         id: "officers_update__signature_officer3",
         dataType: "signature",
         dataAccept: "string",
@@ -206,6 +224,12 @@ const inputs = [
         label: "label4",
       },
       {
+        id: "officers_update__photo_officer4",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
+      {
         id: "officers_update__signature_officer4",
         dataType: "signature",
         dataAccept: "string",
@@ -234,6 +258,12 @@ const inputs = [
         dataType: "dropDown",
         dataAccept: "string",
         label: "label4",
+      },
+      {
+        id: "officers_update__photo_officer4",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
       },
       {
         id: "officers_update__signature_officer5",

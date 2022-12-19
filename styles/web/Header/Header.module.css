@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.burger, .buttonCancel{
+  all: unset;
+  padding: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.burger:hover{
+  border: 2px solid #2CAF95;
+}
+
+.menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 200px;
+  transition: .5s ease-in;
+  transform: translateX(100%);
+  display: none;
+}
+
+.menuActive{
+  display: flex;
+  right: 0;
+  transform: translateX(0);
+  transition: .5s ease-in;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+  }
+  .burger, .buttonCancel {
+    display: flex;
+  }
+  .navigation {
+    display: none;
+  }
+}

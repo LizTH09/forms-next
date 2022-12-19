@@ -13,6 +13,11 @@ const InputSignature = ({ text, id, dataAccept, label, form, setForm }) => {
       });
       setDisableSave(true);
       sigCanvas?.current?.off();
+    } else {
+      setForm({
+        ...form,
+        [id]: "",
+      });
     }
   };
   const handleClickClear = () => {

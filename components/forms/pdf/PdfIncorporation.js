@@ -46,19 +46,27 @@ const PdfIncorporation = ({
       width: "90vh",
       display: "flex",
       flexDirection: "column",
+      // backgroundColor: "red",
+      position: "relative",
     },
     body: {
       marginLeft: 61,
-      marginRight: 96,
+      marginRight: 80,
       marginVertical: 15,
       marginBottom: 40,
     },
     title: {
+      // backgroundColor: "blue",
+      position: "absolute",
+      left: 0,
+      top: "-60px",
       fontSize: 20,
+      width: "65%",
       textTransform: "uppercase",
-      textAlign: "center",
+      textAlign: "left",
       fontWeight: "bold",
-      marginVertical: 30,
+      display: "flex",
+      flexWrap: "wrap",
     },
     line: {
       width: "100%",
@@ -70,7 +78,10 @@ const PdfIncorporation = ({
       color: "#2CAF95",
       fontWeight: "semibold",
     },
-    blackLetter: { fontWeight: "semibold" },
+    blackLetter: {
+      fontWeight: "semibold",
+      textAlign: "center",
+    },
     personalInformation: {
       display: "flex",
       flexDirection: "row",
@@ -81,6 +92,27 @@ const PdfIncorporation = ({
       fontSize: 16,
       fontWeight: "semibold",
       color: "#2CAF95",
+    },
+    column: {
+      display: "flex",
+      flexDirection: "column",
+      width: "530px",
+      gap: "8px",
+    },
+    textColumn: {
+      // marginLeft: "20px",
+      paddingTop: 5,
+      paddingBottom: 10,
+    },
+    twoColumn: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+    },
+    inputInformation: {
+      fontWeight: "semibold",
+      paddingVertical: 5,
+      width: "100%",
     },
     text: {
       fontSize: 12,
@@ -95,31 +127,44 @@ const PdfIncorporation = ({
       justifyContent: "center",
       alignItems: "center",
       marginHorizontal: "20px",
-      marginVertical: 5,
       color: "#9f9f9f",
     },
     textElement: {
-      paddingVertical: 5,
+      paddingVertical: 10,
     },
     lineBlue: {
       width: "30%",
       height: 2,
       borderRadius: 5,
       backgroundColor: "#2CAF95",
-      marginVertical: 15,
+      marginTop: 15,
     },
     signatureContainer: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      marginHorizontal: 20,
-      marginVertical: 10,
+      margingTop: "30px",
+      height: "80px",
+      width: "60px",
     },
     signatureLine: {
       height: 1,
-      minWidth: "120px",
+      width: 100,
       backgroundColor: "black",
       marginVertical: 5,
+    },
+    photoContainer: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+      width: "80px",
+      height: "60px",
+      marginRight: "10px",
+    },
+    photo: {
+      borderRadius: "15px",
+      height: "100%",
+      // maxWidth: "120px",
     },
     image: {
       width: 80,
@@ -134,7 +179,10 @@ const PdfIncorporation = ({
         <View style={styles.content}>
           <PdfHeader />
           <View style={styles.body}>
-            <Text style={styles.title}>{text.title}</Text>
+            <View style={styles.title}>
+              <Text>Business</Text>
+              <Text>Information</Text>
+            </View>
             {/* //----------------------- PERSONAL INFORMATION ---------------------------- */}
             <View style={styles.personalInformation}>
               <View
@@ -339,6 +387,14 @@ const PdfIncorporation = ({
                 </View>
                 <View style={styles.lineBlue}></View>
               </View>
+              {form.officers_information__photo_officer1 && (
+                <View style={styles.photoContainer}>
+                  <Image
+                    src={form.officers_information__photo_officer1}
+                    style={styles.photo}
+                  />
+                </View>
+              )}
             </View>
             //////////////////////////////
             <View
@@ -348,7 +404,6 @@ const PdfIncorporation = ({
                   fontSize: 11,
                   display: "flex",
                   flexDirection: "row",
-                  flexWrap: "wrap",
                   justifyContent: "space-between",
                 },
               ]}
@@ -400,6 +455,14 @@ const PdfIncorporation = ({
                 </View>
                 <View style={styles.lineBlue}></View>
               </View>
+              {form.officers_information__photo_officer2 && (
+                <View style={styles.photoContainer}>
+                  <Image
+                    src={form.officers_information__photo_officer2}
+                    style={styles.photo}
+                  />
+                </View>
+              )}
             </View>
             /////////////////////////////
             <View
@@ -461,6 +524,14 @@ const PdfIncorporation = ({
                 </View>
                 <View style={styles.lineBlue}></View>
               </View>
+              {form.officers_information__photo_officer3 && (
+                <View style={styles.photoContainer}>
+                  <Image
+                    src={form.officers_information__photo_officer3}
+                    style={styles.photo}
+                  />
+                </View>
+              )}
             </View>
             /////////////////////////////
             <View
@@ -522,6 +593,14 @@ const PdfIncorporation = ({
                 </View>
                 <View style={styles.lineBlue}></View>
               </View>
+              {form.officers_information__photo_officer4 && (
+                <View style={styles.photoContainer}>
+                  <Image
+                    src={form.officers_information__photo_officer4}
+                    style={styles.photo}
+                  />
+                </View>
+              )}
             </View>
             /////////////////////////////
             <View
@@ -583,6 +662,14 @@ const PdfIncorporation = ({
                 </View>
                 <View style={styles.lineBlue}></View>
               </View>
+              {form.officers_information__photo_officer5 && (
+                <View style={styles.photoContainer}>
+                  <Image
+                    src={form.officers_information__photo_officer5}
+                    style={styles.photo}
+                  />
+                </View>
+              )}
             </View>
             /////////////////////////////
           </View>
@@ -656,7 +743,7 @@ const PdfIncorporation = ({
                   {text.steps.step5.labels.label2} :{" "}
                 </Text>
                 <Text style={{ paddingVertical: 10, paddingHorizontal: 15 }}>
-                  {form.applicant_information__document}
+                  {form.applicant_information__ssn_itin}
                 </Text>
               </View>
             </View>
@@ -680,87 +767,82 @@ const PdfIncorporation = ({
                   {form.nature_business__company_activity}
                 </Text>
               </View>
-              {form.nature_business__signature_1 && (
+              <View
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  height: "100px",
+                  paddingLeft: "20px",
+                }}
+              >
+                ////////////////////////////////////////////
                 <View
                   style={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
                     justifyContent: "space-between",
-                    flexWrap: "wrap",
+                    width: "120px",
                   }}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
+                  <View style={styles.signatureContainer}>
                     <Image
-                      src={form.nature_business__signature_1}
+                      src={form?.nature_business__signature_1}
                       style={styles.image}
                     />
                     <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.nature_business__position_1}
-                    </Text>
                   </View>
+                  <Text style={{ fontSize: 10 }}>
+                    {form?.nature_business__position_1}
+                  </Text>
                 </View>
-              )}
-              ////////////////////////////////////////////
-              {form.nature_business__signature_2 && (
+                ////////////////////////////////////////////
                 <View
                   style={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
                     justifyContent: "space-between",
-                    flexWrap: "wrap",
+                    marginLeft: "20px",
+                    width: "120px",
                   }}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.nature_business__signature_2}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.nature_business__position_2}
-                    </Text>
-                  </View>
+                  {form.nature_business__signature_2 && (
+                    <View style={styles.signatureContainer}>
+                      <Image
+                        src={form?.nature_business__signature_2}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                    </View>
+                  )}
+                  <Text style={{ fontSize: 10 }}>
+                    {form?.nature_business__position_2}
+                  </Text>
                 </View>
-              )}
-              ////////////////////////////////////////////
-              {form.nature_business__signature_3 && (
+                ////////////////////////////////////////////
                 <View
                   style={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
                     justifyContent: "space-between",
-                    flexWrap: "wrap",
+                    marginLeft: "20px",
+                    width: "120px",
                   }}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.nature_business__signature_3}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.nature_business__position_3}
-                    </Text>
-                  </View>
+                  {form.nature_business__signature_3 && (
+                    <View style={styles.signatureContainer}>
+                      <Image
+                        src={form?.nature_business__signature_3}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                    </View>
+                  )}
+                  <Text style={{ fontSize: 10 }}>
+                    {form?.nature_business__position_3}
+                  </Text>
                 </View>
-              )}
-              ////////////////////////////////////////////
+                ////////////////////////////////////////////
+              </View>
             </View>
           </View>
         </View>

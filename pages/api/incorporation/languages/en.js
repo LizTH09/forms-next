@@ -89,6 +89,7 @@ const handlerEnglish = (required, response) => {
           label1: "Company Activity",
           label2: "Signature",
           label3: "Position",
+          label4: "Document #",
         },
         options: {
           label3: [

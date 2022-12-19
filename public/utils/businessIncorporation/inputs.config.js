@@ -130,6 +130,12 @@ const inputs = [
         dataAccept: "string",
         label: "label5",
       },
+      {
+        id: "officers_information__photo_officer1",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
       { dataType: "newSection" },
       {
         id: "officers_information__complete_name_officer2",
@@ -160,6 +166,12 @@ const inputs = [
         dataType: "dropDown",
         dataAccept: "string",
         label: "label5",
+      },
+      {
+        id: "officers_information__photo_officer2",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
       },
       { dataType: "newSection" },
       {
@@ -192,6 +204,12 @@ const inputs = [
         dataAccept: "string",
         label: "label5",
       },
+      {
+        id: "officers_information__photo_officer3",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
       { dataType: "newSection" },
       {
         id: "officers_information__complete_name_officer4",
@@ -223,6 +241,12 @@ const inputs = [
         dataAccept: "string",
         label: "label5",
       },
+      {
+        id: "officers_information__photo_officer4",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
       { dataType: "newSection" },
       {
         id: "officers_information__complete_name_officer5",
@@ -253,7 +277,13 @@ const inputs = [
         dataType: "dropDown",
         dataAccept: "string",
         label: "label5",
-      }
+      },
+      {
+        id: "officers_information__photo_officer5",
+        dataType: "attachment",
+        dataAccept: "string",
+        label: "label1",
+      },
     ],
   },
   {

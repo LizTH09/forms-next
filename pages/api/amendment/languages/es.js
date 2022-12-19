@@ -72,6 +72,7 @@ const handlerSpanish = (required, response) => {
           label1: "Nombre Completo",
           lable2: "Firma de Autorización",
           label3: "Cargo",
+          label4: "# Documento",
         },
         options: {
           label3: [

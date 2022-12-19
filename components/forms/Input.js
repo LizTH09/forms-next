@@ -4,6 +4,7 @@ import InputNumber from "./inputs/InputNumber";
 import InputDropDown from "./inputs/InputDropDown";
 import InputSignature from "./inputs/InputSignature";
 import InputRadioButton from "./inputs/InputRadioButton";
+import InputAttachment from "./inputs/InputAttachment";
 
 const Input = ({
   text,
@@ -74,6 +75,17 @@ const Input = ({
       )}
       {dataType == "signature" && (
         <InputSignature
+          text={text}
+          id={id}
+          dataAccept={dataAccept}
+          label={label}
+          form={form}
+          setForm={setForm}
+          required={required}
+        />
+      )}
+      {dataType == "attachment" && (
+        <InputAttachment
           text={text}
           id={id}
           dataAccept={dataAccept}

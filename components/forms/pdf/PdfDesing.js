@@ -15,7 +15,7 @@ const FormPDFDesing = () => {
         style={{
           backgroundColor: "#eaeaebd8",
           marginTop: "6vh",
-          height: "12vh",
+          height: "9vh",
           width: "100%",
           position: "absolute",
         }}
