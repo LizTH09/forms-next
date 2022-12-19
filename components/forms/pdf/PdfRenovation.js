@@ -101,6 +101,7 @@ const PdfRenovation = ({
     },
     textColumn: {
       // marginLeft: "20px",
+      width: 60,
       paddingTop: 5,
       paddingBottom: 10,
     },
@@ -192,108 +193,182 @@ const PdfRenovation = ({
               ]}
             >
               <View>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label1} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__company_name}
-                </Text>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label2} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__tax_id}
-                </Text>
+                <View style={styles.twoColumn}>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label1} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__company_name}
+                    </Text>
+                  </View>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label2} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__tax_id}
+                    </Text>
+                  </View>
+                </View>
                 //////////////////////////
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label3} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__phone}
-                </Text>
+                <View style={styles.twoColumn}>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label3} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__phone}
+                    </Text>
+                  </View>
+                  /////////////////////////
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label4} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__email}
+                    </Text>
+                  </View>
+                </View>
                 /////////////////////////
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label4} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__email}
-                </Text>
+                <View style={styles.twoColumn}>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label5} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__document_number}
+                    </Text>
+                  </View>
+                  /////////////////////////
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label6} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__type_organization}
+                    </Text>
+                  </View>
+                </View>
                 /////////////////////////
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label5} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__document_number}
-                </Text>
-                /////////////////////////
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label6} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__type_organization}
-                </Text>
-                /////////////////////////
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label7} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__new_name}
-                </Text>
-                /////////////////////////
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step1.labels.label8} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_company_information__principal_address}
-                </Text>
+                <View style={styles.twoColumn}>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label7} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__new_address}
+                    </Text>
+                  </View>
+                  /////////////////////////
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label8} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__new_city}
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.twoColumn}>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label9} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__new_state}
+                    </Text>
+                  </View>
+                  <View style={styles.textColumn}>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {text.steps.step1.labels.label10} :{" "}
+                    </Text>
+                    <Text
+                      style={{
+                        paddingTop: 5,
+                        paddingBottom: 10,
+                        paddingHorizontal: 15,
+                      }}
+                    >
+                      {form.renovation_company_information__new_zip_code}
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
@@ -833,12 +908,14 @@ const PdfRenovation = ({
                   ]}
                 >
                   {form.renovation_authorization__signature_2 && (
-                    <Image
-                      src={form.renovation_authorization__signature_2}
-                      style={styles.image}
-                    />
+                    <View style={styles.signatureContainer}>
+                      <Image
+                        src={form.renovation_authorization__signature_2}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                    </View>
                   )}
-                  <View style={styles.signatureLine}></View>
                   <Text style={{ fontSize: 10 }}>
                     {form.renovation_authorization__position_2}
                   </Text>
@@ -861,12 +938,14 @@ const PdfRenovation = ({
                   ]}
                 >
                   {form.renovation_authorization__signature_3 && (
-                    <Image
-                      src={form.renovation_authorization__signature_3}
-                      style={styles.image}
-                    />
+                    <View style={styles.signatureContainer}>
+                      <Image
+                        src={form.renovation_authorization__signature_3}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                    </View>
                   )}
-                  <View style={styles.signatureLine}></View>
                   <Text style={{ fontSize: 10 }}>
                     {form.renovation_authorization__position_3}
                   </Text>

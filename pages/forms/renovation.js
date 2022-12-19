@@ -13,16 +13,16 @@ import PdfRenovation from "../../components/forms/pdf/PdfRenovation";
 import ButtonExport from "../../components/forms/pdf/ButtonExport";
 
 const initialValues = {
-  renovation_company_information__company_name: "",
-  renovation_company_information__tax_id: "",
-  renovation_company_information__phone: "",
-  renovation_company_information__email: "",
-  renovation_company_information__document_number: "",
+  renovation_company_information__company_name: "Lizbeth Selena Aldana Tarifeño",
+  renovation_company_information__tax_id: "10738846236",
+  renovation_company_information__phone: "+51942287153",
+  renovation_company_information__email: "10738846236",
+  renovation_company_information__document_number: "73884623",
   renovation_company_information__type_organization: "",
-  renovation_company_information__new_address: "",
-  renovation_company_information__new_city: "",
-  renovation_company_information__new_state: "",
-  renovation_company_information__new_zip_code: "",
+  renovation_company_information__new_address: "Las Margaritas 373",
+  renovation_company_information__new_city: "Chiclayo",
+  renovation_company_information__new_state: "Lambayeque",
+  renovation_company_information__new_zip_code: "14011",
   renovation_company_information__reference_address: "",
   renovation_company_information__reference_city: "",
   renovation_company_information__reference_state: "",
@@ -111,7 +111,7 @@ const Renovation = () => {
           maxSteps={MAX_STEPS}
           text={text}
           form={form}
-          template="template_z06210s"
+          template="template_4yy2zfw"
         />
         {currentStep == MAX_STEPS && (
           <PDFDownloadLink
