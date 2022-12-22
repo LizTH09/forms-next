@@ -4,6 +4,7 @@ import Footer from "../components/web/Footer";
 // import { dbConnect } from "../public/utils/dbConection";
 // import logo from "/assets/infoLogo.jpg";
 import styles from "../styles/web/index.module.css";
+import Maintence from "../components/web/Maintence";
 
 export default function Home() {
   // dbConnect()
@@ -20,18 +21,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
-      <>
-        <Header />
-        <div>
-          <img
-            className={styles.image}
-            // src="https://images.pexels.com/photos/6348820/pexels-photo-6348820.jpeg"
-            src={"/assets/infoLogo.jpg"}
-            alt="Info"
-          />
-        </div>
-        <Footer />
-      </>
+      <Maintence />
     </div>
   );
 }
