@@ -14,8 +14,9 @@ const Form = ({
     <>
       {text?.steps && (
         <div className={styles.inputContainer}>
-          {inputs[currentStep - 1][`step${currentStep}`].map((input) => (
+          {inputs[currentStep - 1][`step${currentStep}`].map((input, index) => (
             <Input
+              key={index}
               text={text.steps[`step${currentStep}`]}
               id={input.id}
               dataType={input.dataType}

@@ -1,3 +1,4 @@
+import connectDB from "../../lib/dbConnection";
 import NavBar from "/components/forms/NavBar";
 import FormContainer from "/components/forms/FormContainer";
 import { useEffect, useState } from "react";
@@ -70,7 +71,7 @@ const initialValues = {
   renovation_authorization__signature_3: "",
 };
 
-const Renovation = () => {
+const  Renovation = () => {
   const date = new Date();
   const [language, setLanguage] = useState("en");
   const changeLanguage = () => {
@@ -127,3 +128,12 @@ const Renovation = () => {
 };
 
 export default Renovation;
+
+export async function getServerSideProps() {
+  try {
+    await connectDB();
+    return { props: { renovationForms: 123 } };
+  } catch (error) {
+    console.log(error);
+  }
+}

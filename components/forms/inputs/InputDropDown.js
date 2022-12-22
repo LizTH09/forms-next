@@ -21,9 +21,10 @@ const InputDropDown = ({
       >
         {text.options[label].map((value, index) => (
           <option
+            key={index}
             value={index ? value : ""}
             disabled={!index}
-            selected={!index}
+            defaultValue={index==0}
           >
             {value}
           </option>
