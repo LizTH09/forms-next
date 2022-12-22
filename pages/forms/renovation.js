@@ -12,6 +12,8 @@ import InputContainer from "../../components/forms/InputContainer";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import PdfRenovation from "../../components/forms/pdf/PdfRenovation";
 import ButtonExport from "../../components/forms/pdf/ButtonExport";
+import en from "/public/utils/renovation/en";
+import es from "/public/utils/renovation/es";
 
 const initialValues = {
   renovation_company_information__company_name: "",
@@ -71,21 +73,15 @@ const initialValues = {
   renovation_authorization__signature_3: "",
 };
 
-const  Renovation = () => {
+const Renovation = () => {
   const date = new Date();
   const [language, setLanguage] = useState("en");
-  const changeLanguage = () => {
-    // fetch(`/utils/renovation/languages/${language}.json`)
-    fetch(`/api/renovation/languages/${language}`)
-      .then((response) => response.json())
-      .then((data) => setText(data));
-  };
   const [currentStep, setCurrentStep] = useState(1);
-  const [text, setText] = useState(changeLanguage());
+  const [text, setText] = useState(en);
   const [form, setForm] = useState(initialValues);
   const MAX_STEPS = 4;
   useEffect(() => {
-    setText(changeLanguage());
+    setText(language == "en" ? en : es);
   }, [language]);
 
   return (

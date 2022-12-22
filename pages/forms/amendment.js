@@ -11,6 +11,8 @@ import InputContainer from "../../components/forms/InputContainer";
 import { PDFDownloadLink, Text } from "@react-pdf/renderer";
 import ButtonExport from "../../components/forms/pdf/ButtonExport";
 import PdfAmendment from "../../components/forms/pdf/PdfAmendment";
+import en from "/public/utils/amendment/en";
+import es from "/public/utils/amendment/es";
 
 const initialValues = {
   company_information__company_name: "",
@@ -75,18 +77,12 @@ const initialValues = {
 const Amendment = () => {
   const date = new Date();
   const [language, setLanguage] = useState("en");
-  const changeLanguage = () => {
-    // fetch(`/utils/amendment/languages/${language}.json`)
-    fetch(`/api/amendment/languages/${language}`)
-      .then((response) => response.json())
-      .then((data) => setText(data));
-  };
   const [currentStep, setCurrentStep] = useState(1);
-  const [text, setText] = useState(changeLanguage());
+  const [text, setText] = useState(en);
   const [form, setForm] = useState(initialValues);
   const MAX_STEPS = 4;
   useEffect(() => {
-    setText(changeLanguage());
+    setText(language == "en" ? en : es);
   }, [language]);
 
   return (
@@ -114,17 +110,11 @@ const Amendment = () => {
           text={text}
           form={form}
           template="template_z06210s"
-          date={date.toLocaleDateString()}
+          date={date.toLocaleDateString("en-US")}
         />
         {currentStep == MAX_STEPS && (
           <PDFDownloadLink
-            document={
-              <PdfAmendment
-                text={text}
-                form={form}
-                date={date}
-              />
-            }
+            document={<PdfAmendment text={text} form={form} date={date} />}
             fileName={`amendment.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />

@@ -11,6 +11,8 @@ import InputContainer from "../../components/forms/InputContainer";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import ButtonExport from "../../components/forms/pdf/ButtonExport";
 import PdfIncorporation from "../../components/forms/pdf/PdfIncorporation";
+import en from '/public/utils/businessIncorporation/en'
+import es from '/public/utils/businessIncorporation/es'
 
 const initialValues = {
   personal_information__complete_name: "",
@@ -75,18 +77,12 @@ const initialValues = {
 const BusinessIncorporation = () => {
   const date = new Date();
   const [language, setLanguage] = useState("en");
-  const changeLanguage = () => {
-    // fetch(`/utils/businessIncorporation/languages/${language}.json`)
-    fetch(`/api/incorporation/languages/${language}`)
-      .then((response) => response.json())
-      .then((data) => setText(data));
-  };
   const [currentStep, setCurrentStep] = useState(1);
-  const [text, setText] = useState(changeLanguage());
+  const [text, setText] = useState(en);
   const [form, setForm] = useState(initialValues);
   const MAX_STEPS = 6;
   useEffect(() => {
-    setText(changeLanguage());
+    setText(language == "en" ? en : es);
   }, [language]);
 
   return (
@@ -117,13 +113,7 @@ const BusinessIncorporation = () => {
         />
         {currentStep == MAX_STEPS && (
           <PDFDownloadLink
-            document={
-              <PdfIncorporation
-                text={text}
-                form={form}
-                date={date}
-              />
-            }
+            document={<PdfIncorporation text={text} form={form} date={date} />}
             fileName={`business-Incorporation.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />

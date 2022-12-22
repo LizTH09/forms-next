@@ -6,6 +6,12 @@
     align-items: center;
 }
 
+.containerIndicator:not(:last-child){
+    display: flex;
+    flex: auto;
+    align-items: center;
+}
+
 .step{
     width: 40px;
     height: 40px;
