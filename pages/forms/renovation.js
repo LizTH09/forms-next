@@ -7,7 +7,7 @@ import StepIndicator from "/components/forms/StepIndicator";
 import StepButtonsControlers from "/components/forms/StepButtonsControlers";
 import Form from "/components/forms/Form";
 import inputs from "/public/utils/renovation/inputs.config";
-import FormHeader from "../../components/forms/formHeader";
+import FormHeader from "../../components/forms/FormHeader";
 import InputContainer from "../../components/forms/InputContainer";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import PdfRenovation from "../../components/forms/pdf/PdfRenovation";
