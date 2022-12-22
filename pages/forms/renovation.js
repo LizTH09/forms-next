@@ -1,4 +1,4 @@
-import connectDB from "../../lib/dbConnection";
+// import connectDB from "../../lib/dbConnection";
 import NavBar from "/components/forms/NavBar";
 import FormContainer from "/components/forms/FormContainer";
 import { useEffect, useState } from "react";
@@ -129,11 +129,11 @@ const  Renovation = () => {
 
 export default Renovation;
 
-export async function getServerSideProps() {
-  try {
-    await connectDB();
-    return { props: { renovationForms: 123 } };
-  } catch (error) {
-    console.log(error);
-  }
-}
+// export async function getServerSideProps() {
+//   try {
+//     await connectDB();
+//     return { props: { renovationForms: 123 } };
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
