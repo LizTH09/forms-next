@@ -7,6 +7,7 @@ import {
   Font,
   Image,
 } from "@react-pdf/renderer";
+import { useEffect } from "react";
 import PdfDesing from "./PdfDesing";
 import PdfHeader from "./PdfHeader";
 Font.register({
@@ -26,6 +27,10 @@ Font.register({
   ],
 });
 const PdfAmendment = ({ text, form, date }) => {
+  useEffect(() => {
+    console.log("on ta el pdf");
+  }, []);
+
   const styles = StyleSheet.create({
     page: {
       display: "flex",
