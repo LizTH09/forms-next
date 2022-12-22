@@ -1,10 +1,13 @@
 import Switch from "./Switch";
 import styles from "../../styles/forms/NavBar.module.css";
+import Link from "next/link";
 
 const NavBar = ({ title, setLanguage }) => {
   return (
     <div className={styles.NavBar}>
-      <span className={styles.logo}>LOGO</span>
+      <Link href="/">
+        <img className={styles.logo} src="/assets/logo.png" alt="Logo" />
+      </Link>
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.switchContainer}>
         <span>EN</span>
