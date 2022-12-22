@@ -2,6 +2,11 @@
   "name": "inrep-web",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "@react-pdf/renderer": {
+      "react": "^18.0.0"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
