@@ -51,3 +51,7 @@
 .label {
   font-size: 16px;
 }
+
+.container {
+  width: 100%;
+}

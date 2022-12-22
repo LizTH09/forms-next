@@ -94,3 +94,14 @@
     width: 45%;
   }
 }
+@media screen and (max-width: 420px) {
+  .inputContainer{
+    width: 100%;
+  }
+  .input::file-selector-button {
+    width: 50%;
+  }
+  .imageContainer{
+    width: 45%;
+  }
+}

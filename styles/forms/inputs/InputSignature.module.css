@@ -46,9 +46,13 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 420px) {
+  .signatureContainer{
+    width: 100%;
+    height: 160px;
+  }
   .sigCanvas{
-    height: 150px;
+    height: 160px;
     width: 100%;
   }
 }

@@ -7,5 +7,6 @@
 @media screen and (max-width: 480px) {
     .buttonsContainer{
         flex-direction: column-reverse;
+        height: 150px;
     }
 }
