@@ -3,7 +3,7 @@ import { View, StyleSheet } from "@react-pdf/renderer";
 const PDFDesing = () => {
   const styles = StyleSheet.create({
     marginDecoration: {
-      width: 42,
+      width: "10vw",
       height: "100vh",
       backgroundColor: "#2CAF95",
       position: "relative",
