@@ -24,17 +24,15 @@ Font.register({
     },
   ],
 });
-const styles = StyleSheet.create({
-  page: {
-    display: "flex",
-    flexDirection: "row",
-    fontFamily: "Montserrat",
-  },
-});
+
 const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
-      <Page size="LETTER" style={styles.page}></Page>
+      <Page size="LETTER">
+        <View>
+          <Text>Hola</Text>
+        </View>
+      </Page>
     </Document>
   );
 };
