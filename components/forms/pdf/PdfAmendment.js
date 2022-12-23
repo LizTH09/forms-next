@@ -28,57 +28,14 @@ Font.register({
 });
 
 const PdfAmendment = ({ text, form, date }) => {
-  const styles = StyleSheet.create({
-    page: {
-      display: "flex",
-      flexDirection: "row",
-      fontFamily: "Montserrat",
-    },
-    content: {
-      width: "90vh",
-      display: "flex",
-      flexDirection: "column",
-      position: "relative",
-    },
-    body: {
-      marginLeft: 61,
-      marginRight: 80,
-      marginVertical: 15,
-      marginBottom: 40,
-    },
-    title: {
-      position: "absolute",
-      left: 0,
-      top: "-60px",
-      fontSize: 20,
-      width: "65%",
-      textTransform: "uppercase",
-      textAlign: "left",
-      fontWeight: "bold",
-      display: "flex",
-      flexWrap: "wrap",
-    },
-    subtitle: {
-      fontSize: 16,
-      fontWeight: "semibold",
-      color: "#2CAF95",
-    },
-    line: {
-      width: "100%",
-      height: 1,
-      backgroundColor: "#e1e2e2d3",
-      marginBottom: 20,
-    },
-  });
-  console.log("on ta el pdf");
   return (
     <Document title="PDFAmendment">
-      <Page size="LETTER" style={styles.page}>
+      <Page size="LETTER">
         <PdfDesing />
-        <View style={styles.content}>
+        <View>
           <PdfHeader />
-          <View style={styles.body}>
-            <View style={styles.title}>
+          <View>
+            <View>
               <Text>{text.steps.step1.title}</Text>
             </View>
           </View>
