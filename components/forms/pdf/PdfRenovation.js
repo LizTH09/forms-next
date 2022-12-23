@@ -41,6 +41,8 @@ const PdfRenovation = ({
       display: "flex",
       flexDirection: "row",
       fontFamily: "Montserrat",
+      width: "100vw",
+      height: "100vh"
     },
     content: {
       width: "90vh",
@@ -175,191 +177,193 @@ const PdfRenovation = ({
 
   return (
     <Document title={text.title}>
-      <Page size="LETTER" style={styles.page}>
-        <PdfDesing />
-        <View style={styles.content}>
-          <PdfHeader />
-          <View style={styles.body}>
-            <Text style={styles.title}>{text.title}</Text>
-            <View
-              style={[
-                styles.text,
-                {
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                },
-              ]}
-            >
-              <View>
-                <View style={styles.twoColumn}>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label1} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__company_name}
-                    </Text>
+      <Page size="LETTER">
+        <View style={styles.page}>
+          <PdfDesing />
+          <View style={styles.content}>
+            <PdfHeader />
+            <View style={styles.body}>
+              <Text style={styles.title}>{text.title}</Text>
+              <View
+                style={[
+                  styles.text,
+                  {
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                  },
+                ]}
+              >
+                <View>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label1} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__company_name}
+                      </Text>
+                    </View>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label2} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__tax_id}
+                      </Text>
+                    </View>
                   </View>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label2} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__tax_id}
-                    </Text>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label3} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__phone}
+                      </Text>
+                    </View>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label4} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__email}
+                      </Text>
+                    </View>
                   </View>
-                </View>
-                <View style={styles.twoColumn}>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label3} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__phone}
-                    </Text>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label5} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__document_number}
+                      </Text>
+                    </View>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label6} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__type_organization}
+                      </Text>
+                    </View>
                   </View>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label4} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__email}
-                    </Text>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label7} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__new_address}
+                      </Text>
+                    </View>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label8} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__new_city}
+                      </Text>
+                    </View>
                   </View>
-                </View>
-                <View style={styles.twoColumn}>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label5} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__document_number}
-                    </Text>
-                  </View>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label6} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__type_organization}
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.twoColumn}>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label7} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__new_address}
-                    </Text>
-                  </View>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label8} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__new_city}
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.twoColumn}>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label9} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__new_state}
-                    </Text>
-                  </View>
-                  <View style={styles.textColumn}>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
-                      {text.steps.step1.labels.label10} :{" "}
-                    </Text>
-                    <Text
-                      style={{
-                        paddingTop: 5,
-                        paddingBottom: 10,
-                        paddingHorizontal: 15,
-                      }}
-                    >
-                      {form.renovation_company_information__new_zip_code}
-                    </Text>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label9} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__new_state}
+                      </Text>
+                    </View>
+                    <View style={styles.textColumn}>
+                      <Text
+                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                      >
+                        {text.steps.step1.labels.label10} :{" "}
+                      </Text>
+                      <Text
+                        style={{
+                          paddingTop: 5,
+                          paddingBottom: 10,
+                          paddingHorizontal: 15,
+                        }}
+                      >
+                        {form.renovation_company_information__new_zip_code}
+                      </Text>
+                    </View>
                   </View>
                 </View>
               </View>
@@ -367,454 +371,14 @@ const PdfRenovation = ({
           </View>
         </View>
       </Page>
-      <Page size="LETTER" style={styles.page}>
-        <PdfDesing />
-        <View style={styles.content}>
-          <PdfHeader />
-          <View style={styles.body}>
-            <Text style={styles.subTitle}>{text.steps.step2.title}</Text>
-            <View style={styles.line}></View>
-            <View
-              style={[
-                styles.text,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                },
-              ]}
-            >
-              {form.officers_update__signature_officer1 && (
-                <View
-                  style={[
-                    styles.text,
-                    {
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      gap: "10px",
-                    },
-                  ]}
-                >
-                  {form.officers_update__photo_officer1 && (
-                    <View style={styles.photoContainer}>
-                      <Image
-                        src={form.officers_update__photo_officer1}
-                        style={styles.photo}
-                      />
-                    </View>
-                  )}
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "50%",
-                    }}
-                  >
-                    <View
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontWeight: "semibold",
-                          fontSize: 12,
-                        }}
-                      >
-                        {form.officers_update__complete_name_officer1}
-                      </Text>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__phone_officer1}
-                        </Text>
-                      </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blackLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__action_officer1}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.officers_update__signature_officer1}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.officers_update__position_officer1}
-                    </Text>
-                  </View>
-                </View>
-              )}
-              {form.officers_update__signature_officer2 && (
-                <View
-                  style={[
-                    styles.text,
-                    {
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      gap: "10px",
-                    },
-                  ]}
-                >
-                  {form.officers_update__photo_officer2 && (
-                    <View style={styles.photoContainer}>
-                      <Image
-                        src={form.officers_update__photo_officer2}
-                        style={styles.photo}
-                      />
-                    </View>
-                  )}
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "50%",
-                    }}
-                  >
-                    <View
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontWeight: "semibold",
-                          fontSize: 12,
-                        }}
-                      >
-                        {form.officers_update__complete_name_officer2}
-                      </Text>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__phone_officer1}
-                        </Text>
-                      </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blackLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__action_officer2}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.officers_update__signature_officer2}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.officers_update__position_officer2}
-                    </Text>
-                  </View>
-                </View>
-              )}
-              {form.officers_update__signature_officer3 && (
-                <View
-                  style={[
-                    styles.text,
-                    {
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      gap: "10px",
-                    },
-                  ]}
-                >
-                  {form.officers_update__photo_officer3 && (
-                    <View style={styles.photoContainer}>
-                      <Image
-                        src={form.officers_update__photo_officer3}
-                        style={styles.photo}
-                      />
-                    </View>
-                  )}
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "50%",
-                    }}
-                  >
-                    <View
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontWeight: "semibold",
-                          fontSize: 12,
-                        }}
-                      >
-                        {form.officers_update__complete_name_officer3}
-                      </Text>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__phone_officer1}
-                        </Text>
-                      </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blackLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__action_officer3}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.officers_update__signature_officer3}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.officers_update__position_officer3}
-                    </Text>
-                  </View>
-                </View>
-              )}
-              {form.officers_update__signature_officer4 && (
-                <View
-                  style={[
-                    styles.text,
-                    {
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      gap: "10px",
-                    },
-                  ]}
-                >
-                  {form.officers_update__photo_officer4 && (
-                    <View style={styles.photoContainer}>
-                      <Image
-                        src={form.officers_update__photo_officer4}
-                        style={styles.photo}
-                      />
-                    </View>
-                  )}
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "50%",
-                    }}
-                  >
-                    <View
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontWeight: "semibold",
-                          fontSize: 12,
-                        }}
-                      >
-                        {form.officers_update__complete_name_officer4}
-                      </Text>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__phone_officer1}
-                        </Text>
-                      </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blackLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__action_officer4}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.officers_update__signature_officer4}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.officers_update__position_officer4}
-                    </Text>
-                  </View>
-                </View>
-              )}
-              {form.officers_update__signature_officer5 && (
-                <View
-                  style={[
-                    styles.text,
-                    {
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "center",
-                      alignContent: "center",
-                      gap: "10px",
-                    },
-                  ]}
-                >
-                  {form.officers_update__photo_officer5 && (
-                    <View style={styles.photoContainer}>
-                      <Image
-                        src={form.officers_update__photo_officer5}
-                        style={styles.photo}
-                      />
-                    </View>
-                  )}
-                  <View
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      width: "50%",
-                    }}
-                  >
-                    <View
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontWeight: "semibold",
-                          fontSize: 12,
-                        }}
-                      >
-                        {form.officers_update__complete_name_officer5}
-                      </Text>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blueLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__phone_officer1}
-                        </Text>
-                      </View>
-                      <View style={{ display: "flex", flexDirection: "row" }}>
-                        <Text
-                          style={[
-                            styles.blackLetter,
-                            { fontSize: 12, fontWeight: "semibold" },
-                          ]}
-                        >
-                          {form.officers_update__action_officer5}
-                        </Text>
-                      </View>
-                    </View>
-                  </View>
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70 },
-                    ]}
-                  >
-                    <Image
-                      src={form.officers_update__signature_officer5}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
-                    <Text style={{ fontSize: 10 }}>
-                      {form.officers_update__position_officer5}
-                    </Text>
-                  </View>
-                </View>
-              )}
-            </View>
-          </View>
-        </View>
-      </Page>
-      <Page size="LETTER" style={styles.page}>
-        <PdfDesing />
-        <View style={styles.content}>
-          <PdfHeader />
-          <View style={styles.body}>
-            <Text style={styles.subTitle}>{text.steps.step3.title}</Text>
-            <View style={styles.line}></View>
-            <View
-              style={[
-                styles.text,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                },
-              ]}
-            >
+      <Page size="LETTER">
+        <View style={styles.page}>
+          <PdfDesing />
+          <View style={styles.content}>
+            <PdfHeader />
+            <View style={styles.body}>
+              <Text style={styles.subTitle}>{text.steps.step2.title}</Text>
+              <View style={styles.line}></View>
               <View
                 style={[
                   styles.text,
@@ -825,34 +389,506 @@ const PdfRenovation = ({
                   },
                 ]}
               >
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step3.labels.label1} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_agent_register__complete_name}
-                </Text>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {text.steps.step3.labels.label2} :{" "}
-                </Text>
-                <Text
-                  style={{
-                    paddingTop: 5,
-                    paddingBottom: 10,
-                    paddingHorizontal: 15,
-                  }}
-                >
-                  {form.renovation_agent_register__address}
-                </Text>
+                {form.officers_update__signature_officer1 && (
+                  <View
+                    style={[
+                      styles.text,
+                      {
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignContent: "center",
+                        gap: "10px",
+                      },
+                    ]}
+                  >
+                    {form.officers_update__photo_officer1 && (
+                      <View style={styles.photoContainer}>
+                        <Image
+                          src={form.officers_update__photo_officer1}
+                          style={styles.photo}
+                        />
+                      </View>
+                    )}
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        width: "50%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontWeight: "semibold",
+                            fontSize: 12,
+                          }}
+                        >
+                          {form.officers_update__complete_name_officer1}
+                        </Text>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blueLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__phone_officer1}
+                          </Text>
+                        </View>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blackLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__action_officer1}
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70 },
+                      ]}
+                    >
+                      <Image
+                        src={form.officers_update__signature_officer1}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.officers_update__position_officer1}
+                      </Text>
+                    </View>
+                  </View>
+                )}
+                {form.officers_update__signature_officer2 && (
+                  <View
+                    style={[
+                      styles.text,
+                      {
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignContent: "center",
+                        gap: "10px",
+                      },
+                    ]}
+                  >
+                    {form.officers_update__photo_officer2 && (
+                      <View style={styles.photoContainer}>
+                        <Image
+                          src={form.officers_update__photo_officer2}
+                          style={styles.photo}
+                        />
+                      </View>
+                    )}
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        width: "50%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontWeight: "semibold",
+                            fontSize: 12,
+                          }}
+                        >
+                          {form.officers_update__complete_name_officer2}
+                        </Text>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blueLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__phone_officer1}
+                          </Text>
+                        </View>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blackLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__action_officer2}
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70 },
+                      ]}
+                    >
+                      <Image
+                        src={form.officers_update__signature_officer2}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.officers_update__position_officer2}
+                      </Text>
+                    </View>
+                  </View>
+                )}
+                {form.officers_update__signature_officer3 && (
+                  <View
+                    style={[
+                      styles.text,
+                      {
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignContent: "center",
+                        gap: "10px",
+                      },
+                    ]}
+                  >
+                    {form.officers_update__photo_officer3 && (
+                      <View style={styles.photoContainer}>
+                        <Image
+                          src={form.officers_update__photo_officer3}
+                          style={styles.photo}
+                        />
+                      </View>
+                    )}
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        width: "50%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontWeight: "semibold",
+                            fontSize: 12,
+                          }}
+                        >
+                          {form.officers_update__complete_name_officer3}
+                        </Text>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blueLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__phone_officer1}
+                          </Text>
+                        </View>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blackLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__action_officer3}
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70 },
+                      ]}
+                    >
+                      <Image
+                        src={form.officers_update__signature_officer3}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.officers_update__position_officer3}
+                      </Text>
+                    </View>
+                  </View>
+                )}
+                {form.officers_update__signature_officer4 && (
+                  <View
+                    style={[
+                      styles.text,
+                      {
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignContent: "center",
+                        gap: "10px",
+                      },
+                    ]}
+                  >
+                    {form.officers_update__photo_officer4 && (
+                      <View style={styles.photoContainer}>
+                        <Image
+                          src={form.officers_update__photo_officer4}
+                          style={styles.photo}
+                        />
+                      </View>
+                    )}
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        width: "50%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontWeight: "semibold",
+                            fontSize: 12,
+                          }}
+                        >
+                          {form.officers_update__complete_name_officer4}
+                        </Text>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blueLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__phone_officer1}
+                          </Text>
+                        </View>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blackLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__action_officer4}
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70 },
+                      ]}
+                    >
+                      <Image
+                        src={form.officers_update__signature_officer4}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.officers_update__position_officer4}
+                      </Text>
+                    </View>
+                  </View>
+                )}
+                {form.officers_update__signature_officer5 && (
+                  <View
+                    style={[
+                      styles.text,
+                      {
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignContent: "center",
+                        gap: "10px",
+                      },
+                    ]}
+                  >
+                    {form.officers_update__photo_officer5 && (
+                      <View style={styles.photoContainer}>
+                        <Image
+                          src={form.officers_update__photo_officer5}
+                          style={styles.photo}
+                        />
+                      </View>
+                    )}
+                    <View
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        width: "50%",
+                      }}
+                    >
+                      <View
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Text
+                          style={{
+                            fontWeight: "semibold",
+                            fontSize: 12,
+                          }}
+                        >
+                          {form.officers_update__complete_name_officer5}
+                        </Text>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blueLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__phone_officer1}
+                          </Text>
+                        </View>
+                        <View style={{ display: "flex", flexDirection: "row" }}>
+                          <Text
+                            style={[
+                              styles.blackLetter,
+                              { fontSize: 12, fontWeight: "semibold" },
+                            ]}
+                          >
+                            {form.officers_update__action_officer5}
+                          </Text>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70 },
+                      ]}
+                    >
+                      <Image
+                        src={form.officers_update__signature_officer5}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.officers_update__position_officer5}
+                      </Text>
+                    </View>
+                  </View>
+                )}
               </View>
-              <Text style={styles.subTitle}>{text.steps.step4.title}</Text>
+            </View>
+          </View>
+        </View>
+      </Page>
+      <Page size="LETTER">
+        <View style={styles.page}>
+          <PdfDesing />
+          <View style={styles.content}>
+            <PdfHeader />
+            <View style={styles.body}>
+              <Text style={styles.subTitle}>{text.steps.step3.title}</Text>
               <View style={styles.line}></View>
-              {form.renovation_authorization__signature_1 && (
+              <View
+                style={[
+                  styles.text,
+                  {
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  },
+                ]}
+              >
+                <View
+                  style={[
+                    styles.text,
+                    {
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                    },
+                  ]}
+                >
+                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                    {text.steps.step3.labels.label1} :{" "}
+                  </Text>
+                  <Text
+                    style={{
+                      paddingTop: 5,
+                      paddingBottom: 10,
+                      paddingHorizontal: 15,
+                    }}
+                  >
+                    {form.renovation_agent_register__complete_name}
+                  </Text>
+                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                    {text.steps.step3.labels.label2} :{" "}
+                  </Text>
+                  <Text
+                    style={{
+                      paddingTop: 5,
+                      paddingBottom: 10,
+                      paddingHorizontal: 15,
+                    }}
+                  >
+                    {form.renovation_agent_register__address}
+                  </Text>
+                </View>
+                <Text style={styles.subTitle}>{text.steps.step4.title}</Text>
+                <View style={styles.line}></View>
+                {form.renovation_authorization__signature_1 && (
+                  <View
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        { width: 90, height: 70, marginBottom: 30 },
+                      ]}
+                    >
+                      <Image
+                        src={form.renovation_authorization__signature_1}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.renovation_authorization__position_1}
+                      </Text>
+                    </View>
+                    <Text
+                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                    >
+                      {form.renovation_authorization__complete_name_1}
+                    </Text>
+                  </View>
+                )}
                 <View
                   style={{
                     display: "flex",
@@ -866,79 +902,53 @@ const PdfRenovation = ({
                       { width: 90, height: 70, marginBottom: 30 },
                     ]}
                   >
-                    <Image
-                      src={form.renovation_authorization__signature_1}
-                      style={styles.image}
-                    />
-                    <View style={styles.signatureLine}></View>
+                    {form.renovation_authorization__signature_2 && (
+                      <View style={styles.signatureContainer}>
+                        <Image
+                          src={form.renovation_authorization__signature_2}
+                          style={styles.image}
+                        />
+                        <View style={styles.signatureLine}></View>
+                      </View>
+                    )}
                     <Text style={{ fontSize: 10 }}>
-                      {form.renovation_authorization__position_1}
+                      {form.renovation_authorization__position_2}
                     </Text>
                   </View>
                   <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                    {form.renovation_authorization__complete_name_1}
+                    {form.renovation_authorization__complete_name_2}
                   </Text>
                 </View>
-              )}
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
                 <View
-                  style={[
-                    styles.signatureContainer,
-                    { width: 90, height: 70, marginBottom: 30 },
-                  ]}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
                 >
-                  {form.renovation_authorization__signature_2 && (
-                    <View style={styles.signatureContainer}>
-                      <Image
-                        src={form.renovation_authorization__signature_2}
-                        style={styles.image}
-                      />
-                      <View style={styles.signatureLine}></View>
-                    </View>
-                  )}
-                  <Text style={{ fontSize: 10 }}>
-                    {form.renovation_authorization__position_2}
+                  <View
+                    style={[
+                      styles.signatureContainer,
+                      { width: 90, height: 70, marginBottom: 30 },
+                    ]}
+                  >
+                    {form.renovation_authorization__signature_3 && (
+                      <View style={styles.signatureContainer}>
+                        <Image
+                          src={form.renovation_authorization__signature_3}
+                          style={styles.image}
+                        />
+                        <View style={styles.signatureLine}></View>
+                      </View>
+                    )}
+                    <Text style={{ fontSize: 10 }}>
+                      {form.renovation_authorization__position_3}
+                    </Text>
+                  </View>
+                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                    {form.renovation_authorization__complete_name_3}
                   </Text>
                 </View>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {form.renovation_authorization__complete_name_2}
-                </Text>
-              </View>
-              <View
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <View
-                  style={[
-                    styles.signatureContainer,
-                    { width: 90, height: 70, marginBottom: 30 },
-                  ]}
-                >
-                  {form.renovation_authorization__signature_3 && (
-                    <View style={styles.signatureContainer}>
-                      <Image
-                        src={form.renovation_authorization__signature_3}
-                        style={styles.image}
-                      />
-                      <View style={styles.signatureLine}></View>
-                    </View>
-                  )}
-                  <Text style={{ fontSize: 10 }}>
-                    {form.renovation_authorization__position_3}
-                  </Text>
-                </View>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
-                  {form.renovation_authorization__complete_name_3}
-                </Text>
               </View>
             </View>
           </View>
