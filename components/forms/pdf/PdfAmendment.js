@@ -131,24 +131,6 @@ const PdfAmendment = ({ text, form, date }) => {
                   </Text>
                 </View>
               </View>
-              <View style={styles.twoColumn}>
-                <View style={styles.column}>
-                  <Text style={styles.inputLabel}>
-                    {text.steps.step1.labels.label3} :{" "}
-                  </Text>
-                  <Text style={styles.inputValue}>
-                    {form.company_information__phone}
-                  </Text>
-                </View>
-                <View style={styles.column}>
-                  <Text style={styles.inputLabel}>
-                    {text.steps.step1.labels.label4} :{" "}
-                  </Text>
-                  <Text style={styles.inputValue}>
-                    {form.company_information__email}
-                  </Text>
-                </View>
-              </View>
             </View>
           </View>
         </View>
