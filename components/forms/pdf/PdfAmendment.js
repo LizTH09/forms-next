@@ -8,6 +8,7 @@ import {
   Image,
 } from "@react-pdf/renderer";
 import PDFDesing from "./PdfDesing";
+import PdfHeader from "./PdfHeader";
 
 Font.register({
   family: "Montserrat",
@@ -34,6 +35,21 @@ const PdfAmendment = ({ text, form, date }) => {
       flexDirection: "column",
       position: "relative",
     },
+    title: {
+      position: "absolute",
+      left: 0,
+      top: "-60px",
+      fontSize: 20,
+      width: "65%",
+      textTransform: "uppercase",
+      textAlign: "left",
+      fontWeight: "bold",
+    },
+    subTitle: {
+      fontSize: 16,
+      fontWeight: "semibold",
+      color: "#2CAF95",
+    },
   });
   return (
     <Document title="PDFAmendment">
@@ -41,6 +57,10 @@ const PdfAmendment = ({ text, form, date }) => {
         <PDFDesing />
         <View style={stylesPdf.content}>
           <PdfHeader />
+          <View style={stylesPdf.title}>
+            <Text>COMPANY AMENDMENT</Text>
+            <Text style={styles.subTitle}>{text.steps.step1.title}</Text>
+          </View>
         </View>
       </Page>
     </Document>
