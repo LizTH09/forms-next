@@ -29,7 +29,7 @@ Font.register({
 const PdfAmendment = ({ text, form, date }) => {
   const stylesPdf = StyleSheet.create({
     content: {
-      width: "92vh",
+      width: "93vh",
       display: "flex",
       flexDirection: "column",
       position: "relative",
