@@ -90,38 +90,6 @@ const PdfAmendment = ({ text, form, date }) => {
       backgroundColor: "#e1e2e2d3",
       marginBottom: 20,
     },
-    contentStep: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "20px",
-      justifyContent: "space-between",
-      margin: 5,
-      marginBottom: 20,
-      fontSize: 12,
-    },
-    twoColumn: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-    },
-    column: {
-      display: "flex",
-      flexDirection: "column",
-      width: "530px",
-      gap: "8px",
-    },
-    inputLabel: {
-      fontWeight: "semibold",
-      fontSize: 13,
-      paddingVertical: 5,
-      width: "100%",
-    },
-    inputValue: {
-      paddingLeft: 10,
-      paddingTop: 5,
-      paddingBottom: 10,
-      fontSize: 11,
-    },
   });
   return (
     <Document title="PDFAmendment">
@@ -143,24 +111,6 @@ const PdfAmendment = ({ text, form, date }) => {
           <View style={stylesPdf.body}>
             <Text style={stylesPdf.subTitle}>{text.steps.step1.title}</Text>
             <View style={stylesPdf.line}></View>
-            <View style={stylesPdf.twoColumn}>
-              <View style={stylesPdf.column}>
-                <Text style={stylesPdf.inputLabel}>
-                  {text.steps.step1.labels.label1} :{" "}
-                </Text>
-                <Text style={stylesPdf.inputValue}>
-                  {form.company_information__company_name}
-                </Text>
-              </View>
-              <View style={stylesPdf.column}>
-                <Text style={stylesPdf.inputLabel}>
-                  {text.steps.step1.labels.label2} :{" "}
-                </Text>
-                <Text style={stylesPdf.inputValue}>
-                  {form.company_information__tax_id}
-                </Text>
-              </View>
-            </View>
           </View>
         </View>
       </Page>
