@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     width: "90vw",
     display: "flex",
     flexDirection: "column",
+    
   },
 });
 const PdfAmendment = ({ text, form, date }) => {
