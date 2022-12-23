@@ -69,35 +69,6 @@ const PdfAmendment = ({ text, form, date }) => {
       backgroundColor: "#e1e2e2d3",
       marginBottom: 20,
     },
-    contentStep: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "20px",
-      justifyContent: "space-between",
-      margin: 5,
-      marginBottom: 20,
-      fontSize: 12,
-    },
-    twoColumn: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-    },
-    column: {
-      display: "flex",
-      flexDirection: "column",
-      width: "530px",
-      gap: "8px",
-    },
-    inputLabel: {
-      fontWeight: "semibold",
-      paddingVertical: 5,
-      width: "100%",
-    },
-    inputValue: {
-      paddingTop: 5,
-      paddingBottom: 10,
-    },
   });
   console.log("on ta el pdf");
   return (
