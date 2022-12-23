@@ -44,11 +44,7 @@ const PdfAmendment = ({ text, form, date }) => {
         <PdfDesing />
         <View style={styles.content}>
           <PdfHeader />
-          <View>
-            <View>
-              <Text>{text.steps.step1.title}</Text>
-            </View>
-          </View>
+          
         </View>
       </Page>
     </Document>
