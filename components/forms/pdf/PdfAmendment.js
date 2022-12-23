@@ -35,6 +35,12 @@ const PdfAmendment = ({ text, form, date }) => {
       flexDirection: "column",
       position: "relative",
     },
+    contactInfoCard: {
+      position: "absolute",
+      right: "20px",
+      top: "6vh",
+      width: "30vw",
+    },
     title: {
       position: "absolute",
       left: 0,
@@ -56,7 +62,9 @@ const PdfAmendment = ({ text, form, date }) => {
       <Page size="LETTER">
         <PDFDesing />
         <View style={stylesPdf.content}>
-          <PdfHeader />
+          <View style={styles.contactInfoCard} wrap={false}>
+            <Image src="/assets/infoLogo.jpg" source="Info Logo" />
+          </View>
           <View style={stylesPdf.title}>
             <Text>COMPANY AMENDMENT</Text>
             <Text style={stylesPdf.subTitle}>{text.steps.step1.title}</Text>
