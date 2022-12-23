@@ -8,18 +8,17 @@ const FormPDFDesing = () => {
       backgroundColor: "#2CAF95",
       position: "relative",
     },
+    desing: {
+      backgroundColor: "#eaeaebd8",
+      marginTop: "6vh",
+      height: "9vh",
+      width: "100%",
+      position: "absolute",
+    },
   });
   return (
     <View style={styles.marginDecoration}>
-      <View
-        style={{
-          backgroundColor: "#eaeaebd8",
-          marginTop: "6vh",
-          height: "9vh",
-          width: "100%",
-          position: "absolute",
-        }}
-      ></View>
+      <View style={styles.desing}></View>
     </View>
   );
 };

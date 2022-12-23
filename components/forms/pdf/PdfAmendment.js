@@ -7,6 +7,7 @@ import {
   Font,
   Image,
 } from "@react-pdf/renderer";
+import PdfDesing from "./PdfDesing";
 
 const PdfAmendment = ({ text, form, date }) => {
   const styles = StyleSheet.create({
@@ -18,6 +19,7 @@ const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER">
+        <PdfDesing />
         <View style={styles.title}>
           <Text>{text.steps.step1.title}</Text>
         </View>
