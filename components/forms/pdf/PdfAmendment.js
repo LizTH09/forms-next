@@ -7,6 +7,7 @@ import {
   Font,
   Image,
 } from "@react-pdf/renderer";
+import PDFDesing from "./PdfDesing";
 
 Font.register({
   family: "Montserrat",
@@ -29,6 +30,7 @@ const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER">
+        <PDFDesing />
         <View>
           <Text>COMPANY AMENDMENT</Text>
         </View>

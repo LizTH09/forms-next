@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "@react-pdf/renderer";
 
-const FormPDFDesing = () => {
+const PDFDesing = () => {
   const styles = StyleSheet.create({
     marginDecoration: {
       width: 42,
@@ -23,4 +23,4 @@ const FormPDFDesing = () => {
   );
 };
 
-export default FormPDFDesing;
+export default PDFDesing;
