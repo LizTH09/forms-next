@@ -181,7 +181,6 @@ const PdfRenovation = ({
           <PdfHeader />
           <View style={styles.body}>
             <Text style={styles.title}>{text.title}</Text>
-            ////////////////////////////////STEP1/////////////////////////////////
             <View
               style={[
                 styles.text,
@@ -227,7 +226,6 @@ const PdfRenovation = ({
                     </Text>
                   </View>
                 </View>
-                //////////////////////////
                 <View style={styles.twoColumn}>
                   <View style={styles.textColumn}>
                     <Text
@@ -245,7 +243,6 @@ const PdfRenovation = ({
                       {form.renovation_company_information__phone}
                     </Text>
                   </View>
-                  /////////////////////////
                   <View style={styles.textColumn}>
                     <Text
                       style={{ fontWeight: "semibold", paddingVertical: 5 }}
@@ -263,7 +260,6 @@ const PdfRenovation = ({
                     </Text>
                   </View>
                 </View>
-                /////////////////////////
                 <View style={styles.twoColumn}>
                   <View style={styles.textColumn}>
                     <Text
@@ -281,7 +277,6 @@ const PdfRenovation = ({
                       {form.renovation_company_information__document_number}
                     </Text>
                   </View>
-                  /////////////////////////
                   <View style={styles.textColumn}>
                     <Text
                       style={{ fontWeight: "semibold", paddingVertical: 5 }}
@@ -299,7 +294,6 @@ const PdfRenovation = ({
                     </Text>
                   </View>
                 </View>
-                /////////////////////////
                 <View style={styles.twoColumn}>
                   <View style={styles.textColumn}>
                     <Text
@@ -317,7 +311,6 @@ const PdfRenovation = ({
                       {form.renovation_company_information__new_address}
                     </Text>
                   </View>
-                  /////////////////////////
                   <View style={styles.textColumn}>
                     <Text
                       style={{ fontWeight: "semibold", paddingVertical: 5 }}
@@ -374,7 +367,6 @@ const PdfRenovation = ({
           </View>
         </View>
       </Page>
-      ////////////////////////////////STEP2/////////////////////////////////
       <Page size="LETTER" style={styles.page}>
         <PdfDesing />
         <View style={styles.content}>
@@ -474,7 +466,6 @@ const PdfRenovation = ({
                   </View>
                 </View>
               )}
-              ///////////////////////////////////////////
               {form.officers_update__signature_officer2 && (
                 <View
                   style={[
@@ -557,7 +548,6 @@ const PdfRenovation = ({
                   </View>
                 </View>
               )}
-              ////////////////////////////////////////////
               {form.officers_update__signature_officer3 && (
                 <View
                   style={[
@@ -640,7 +630,6 @@ const PdfRenovation = ({
                   </View>
                 </View>
               )}
-              ////////////////////////////////////////////
               {form.officers_update__signature_officer4 && (
                 <View
                   style={[
@@ -723,7 +712,6 @@ const PdfRenovation = ({
                   </View>
                 </View>
               )}
-              ////////////////////////////////////////////
               {form.officers_update__signature_officer5 && (
                 <View
                   style={[
@@ -806,12 +794,10 @@ const PdfRenovation = ({
                   </View>
                 </View>
               )}
-              ////////////////////////////////////////////
             </View>
           </View>
         </View>
       </Page>
-      ///////////////////////////////STEP3/////////////////////////////////
       <Page size="LETTER" style={styles.page}>
         <PdfDesing />
         <View style={styles.content}>
