@@ -281,17 +281,7 @@ const PdfAmendment = ({ text, form, date }) => {
           </View>
         </View>
       </Page>
-      <Page size="LETTER" style={styles.page}>
-        <PdfDesing />
-        <View style={styles.content}>
-          <PdfHeader />
-          <View style={styles.body}>
-            <Text style={styles.subtitle}>{text.steps.step2.title}</Text>
-            <View style={styles.line} />
-            <View style={styles.contentStep}></View>
-          </View>
-        </View>
-      </Page>
+      
     </Document>
   );
 };
