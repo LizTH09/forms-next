@@ -51,7 +51,9 @@ const PdfAmendment = ({ text, form, date }) => {
         <PDFDesing />
         <View style={stylesPdf.content}>
           <PdfHeader />
-          <Text style={stylesPdf.title}>COMPANY AMENDMENT</Text>
+          <View style={stylesPdf.title}>
+            <Text>COMPANY AMENDMENT</Text>
+          </View>
         </View>
       </Page>
     </Document>
