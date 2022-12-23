@@ -288,17 +288,7 @@ const PdfAmendment = ({ text, form, date }) => {
           <View style={styles.body}>
             <Text style={styles.subtitle}>{text.steps.step2.title}</Text>
             <View style={styles.line} />
-            <View style={styles.contentStep}>
-              {form.change_officers__signature_officer1 && (
-                <View style={styles.card}>
-                  <View style={styles.cardInformation}>
-                    {form.change_officers__photo_officer1 && (
-                      <View style={styles.photoContainer}></View>
-                    )}
-                  </View>
-                </View>
-              )}
-            </View>
+            <View style={styles.contentStep}></View>
           </View>
         </View>
       </Page>
