@@ -28,6 +28,13 @@ Font.register({
 
 const PdfAmendment = ({ text, form, date }) => {
   const stylesPdf = StyleSheet.create({
+    completePage: {
+      display: "flex",
+      flexDirection: "row",
+      fontFamily: "Montserrat",
+      width: "100vw",
+      height: "100vh",
+    },
     content: {
       width: "93vh",
       display: "flex",
@@ -38,9 +45,11 @@ const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER">
-        <PDFDesing />
-        <View style={stylesPdf.content}>
-          <Text>COMPANY AMENDMENT</Text>
+        <View style={stylesPdf.completePage}>
+          <PDFDesing />
+          <View style={style.content}>
+            <Text>COMPANY AMENDMENT</Text>
+          </View>
         </View>
       </Page>
     </Document>
