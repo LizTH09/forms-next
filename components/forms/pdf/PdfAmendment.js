@@ -165,7 +165,9 @@ const PdfAmendment = ({ text, form, date }) => {
   });
   return (
     <Document title="PDFAmendment">
-      <Page></Page>
+      <Page style={styles.page}>
+        
+      </Page>
     </Document>
   );
 };
