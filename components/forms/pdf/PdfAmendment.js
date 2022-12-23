@@ -32,13 +32,19 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     fontFamily: "Montserrat",
   },
+  content: {
+    width: "90vh",
+    display: "flex",
+    flexDirection: "column",
+    position: "relative",
+  },
 });
 const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER" style={styles.page}>
         <PdfDesing />
-        <View>
+        <View style={styles.content}>
           <PdfHeader />
           <View>
             <View>
