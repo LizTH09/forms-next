@@ -34,16 +34,6 @@ const PdfAmendment = ({ text, form, date }) => {
       flexDirection: "column",
       position: "relative",
     },
-    title: {
-      position: "absolute",
-      left: 0,
-      top: "-60px",
-      fontSize: 20,
-      width: "65%",
-      textTransform: "uppercase",
-      textAlign: "left",
-      fontWeight: "bold",
-    },
   });
   return (
     <Document title="PDFAmendment">
@@ -51,9 +41,6 @@ const PdfAmendment = ({ text, form, date }) => {
         <PDFDesing />
         <View style={stylesPdf.content}>
           <PdfHeader />
-          <View style={stylesPdf.title}>
-            <Text>COMPANY AMENDMENT</Text>
-          </View>
         </View>
       </Page>
     </Document>
