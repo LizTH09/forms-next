@@ -25,25 +25,11 @@ Font.register({
   ],
 });
 
-const stylesPdf = StyleSheet.create({
-  title: {
-    position: "absolute",
-    left: 0,
-    top: "-60px",
-    fontSize: 20,
-    width: "65%",
-    textTransform: "uppercase",
-    textAlign: "left",
-    fontWeight: "bold",
-    display: "flex",
-    flexWrap: "wrap",
-  },
-});
 const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER">
-        <View style={stylesPdf.title}>
+        <View>
           <Text>COMPANY AMENDMENT</Text>
         </View>
       </Page>
