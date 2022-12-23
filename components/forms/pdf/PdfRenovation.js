@@ -37,12 +37,12 @@ const PdfRenovation = ({
   const tel =
     "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik04LjI2IDEuMjg5bC0xLjU2NC43NzJjLTUuNzkzIDMuMDIgMi43OTggMjAuOTQ0IDkuMzEgMjAuOTQ0LjQ2IDAgLjkwNC0uMDk0IDEuMzE3LS4yODRsMS41NDItLjc1NS0yLjg5OC01LjU5NC0xLjU0Ljc1NGMtLjE4MS4wODctLjM4NC4xMzQtLjU5Ny4xMzQtMi41NjEgMC02Ljg0MS04LjIwNC00LjI0MS05LjU5NmwxLjU0Ni0uNzYzLTIuODc1LTUuNjEyem03Ljc0NiAyMi43MTFjLTUuNjggMC0xMi4yMjEtMTEuMTE0LTEyLjIyMS0xNy44MzIgMC0yLjQxOS44MzMtNC4xNDYgMi40NTctNC45OTJsMi4zODItMS4xNzYgMy44NTcgNy4zNDctMi40MzcgMS4yMDFjLTEuNDM5Ljc3MiAyLjQwOSA4LjQyNCAzLjk1NiA3LjY4bDIuMzk5LTEuMTc5IDMuODE2IDcuMzZzLTIuMzYgMS4xNjItMi40NzYgMS4yMTVjLS41NDcuMjUxLTEuMTI5LjM3Ni0xLjczMy4zNzYiLz48L3N2Zz4=";
   const styles = StyleSheet.create({
-    page: {
+    completePage: {
       display: "flex",
       flexDirection: "row",
       fontFamily: "Montserrat",
       width: "100vw",
-      height: "100vh"
+      height: "100vh",
     },
     content: {
       width: "90vh",
@@ -178,7 +178,7 @@ const PdfRenovation = ({
   return (
     <Document title={text.title}>
       <Page size="LETTER">
-        <View style={styles.page}>
+        <View style={styles.completePage}>
           <PdfDesing />
           <View style={styles.content}>
             <PdfHeader />
@@ -372,7 +372,7 @@ const PdfRenovation = ({
         </View>
       </Page>
       <Page size="LETTER">
-        <View style={styles.page}>
+        <View style={styles.completePage}>
           <PdfDesing />
           <View style={styles.content}>
             <PdfHeader />
@@ -805,7 +805,7 @@ const PdfRenovation = ({
         </View>
       </Page>
       <Page size="LETTER">
-        <View style={styles.page}>
+        <View style={styles.completePage}>
           <PdfDesing />
           <View style={styles.content}>
             <PdfHeader />

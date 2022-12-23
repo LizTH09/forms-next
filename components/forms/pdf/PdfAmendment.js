@@ -42,17 +42,15 @@ const PdfAmendment = ({ text, form, date }) => {
       position: "relative",
     },
     title: {
-          position: "absolute",
-          left: 0,
-          top: "-60px",
-          fontSize: 20,
-          width: "65%",
-          textTransform: "uppercase",
-          textAlign: "left",
-          fontWeight: "bold",
-          display: "flex",
-          flexWrap: "wrap",
-        },
+      position: "absolute",
+      left: 0,
+      top: "-60px",
+      fontSize: 20,
+      width: "65%",
+      textTransform: "uppercase",
+      textAlign: "left",
+      fontWeight: "bold",
+    },
   });
   return (
     <Document title="PDFAmendment">
