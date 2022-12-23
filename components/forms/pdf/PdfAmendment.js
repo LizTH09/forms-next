@@ -7,8 +7,6 @@ import {
   Font,
   Image,
 } from "@react-pdf/renderer";
-import PdfDesing from "./PdfDesing";
-import PdfHeader from "./PdfHeader";
 
 Font.register({
   family: "Montserrat",
@@ -36,17 +34,7 @@ const styles = StyleSheet.create({
 const PdfAmendment = ({ text, form, date }) => {
   return (
     <Document title="PDFAmendment">
-      <Page size="LETTER" style={styles.page}>
-        <PdfDesing />
-        <View>
-          <PdfHeader />
-          <View>
-            <View>
-              <Text>{text.steps.step1.title}</Text>
-            </View>
-          </View>
-        </View>
-      </Page>
+      <Page size="LETTER" style={styles.page}></Page>
     </Document>
   );
 };
