@@ -30,7 +30,7 @@ const PdfAmendment = ({ text, form, date }) => {
     <Document title="PDFAmendment">
       <Page size="LETTER">
         <View>
-          <Text>{text.steps.title}</Text>
+          <Text>{text.title}</Text>
         </View>
       </Page>
     </Document>
