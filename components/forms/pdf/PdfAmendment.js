@@ -98,32 +98,6 @@ const PdfAmendment = ({ text, form, date }) => {
       paddingTop: 5,
       paddingBottom: 10,
     },
-    card: {
-      display: "flex",
-      flexDirection: "column",
-      height: "70px",
-      gap: "10px",
-      margin: 5,
-      marginBottom: 20,
-      fontSize: 12,
-    },
-    cardInformation: {
-      margin: 5,
-      marginBottom: 20,
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignContent: "center",
-      gap: "10px",
-    },
-    photoCard: {
-      display: "flex",
-      justifyContent: "center",
-      alignContent: "center",
-      width: "80px",
-      height: "60px",
-      marginRight: "10px",
-    },
   });
   console.log("on ta el pdf");
   return (
@@ -281,7 +255,6 @@ const PdfAmendment = ({ text, form, date }) => {
           </View>
         </View>
       </Page>
-      
     </Document>
   );
 };
