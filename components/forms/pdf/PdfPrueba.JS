@@ -11,7 +11,7 @@ import {
 const PdfPrueba = ({text, form, date}) => {
   return (
     <Document>
-        <Page></Page>
+        <Page>{text.steps.step2.title}</Page>
     </Document>
   )
 }
