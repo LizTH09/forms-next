@@ -114,7 +114,7 @@ const Amendment = () => {
         />
         {currentStep == MAX_STEPS && (
           <PDFDownloadLink
-            document={<PdfAmendment text={text} form={form} date={date} />}
+            document={<PdfPrueba text={text} form={form} date={date} />}
             fileName={`amendment.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />
