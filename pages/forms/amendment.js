@@ -13,7 +13,7 @@ import ButtonExport from "../../components/forms/pdf/ButtonExport";
 import PdfAmendment from "../../components/forms/pdf/PdfAmendment";
 import en from "/public/utils/amendment/en";
 import es from "/public/utils/amendment/es";
-import PdfPrueba from "../../components/forms/pdf/PdfPrueba.js";
+import PdfPrueba from "../../components/forms/pdf/PdfPrueba";
 
 const initialValues = {
   company_information__company_name: "",
