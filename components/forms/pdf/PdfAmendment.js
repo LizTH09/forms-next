@@ -10,11 +10,29 @@ import {
 import PdfDesing from "./PdfDesing";
 import PdfHeader from "./PdfHeader";
 
+Font.register({
+  family: "Montserrat",
+  fonts: [
+    {
+      src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf",
+    },
+    {
+      src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf",
+      fontWeight: "semibold",
+    },
+    {
+      src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf",
+      fontWeight: "bold",
+    },
+  ],
+});
+
 const PdfAmendment = ({ text, form, date }) => {
   const styles = StyleSheet.create({
     page: {
       display: "flex",
       flexDirection: "row",
+      fontFamily: "Montserrat",
     },
     content: {
       width: "90vh",
@@ -39,6 +57,11 @@ const PdfAmendment = ({ text, form, date }) => {
       fontWeight: "bold",
       display: "flex",
       flexWrap: "wrap",
+    },
+    subtitle: {
+      fontSize: 16,
+      fontWeight: "semibold",
+      color: "#2CAF95",
     },
     line: {
       width: "100%",
@@ -75,6 +98,32 @@ const PdfAmendment = ({ text, form, date }) => {
       paddingTop: 5,
       paddingBottom: 10,
     },
+    card: {
+      display: "flex",
+      flexDirection: "column",
+      height: "70px",
+      gap: "10px",
+      margin: 5,
+      marginBottom: 20,
+      fontSize: 12,
+    },
+    cardInformation: {
+      margin: 5,
+      marginBottom: 20,
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignContent: "center",
+      gap: "10px",
+    },
+    photoCard: {
+      display: "flex",
+      justifyContent: "center",
+      alignContent: "center",
+      width: "80px",
+      height: "60px",
+      marginRight: "10px",
+    },
   });
   console.log("on ta el pdf");
   return (
@@ -87,8 +136,8 @@ const PdfAmendment = ({ text, form, date }) => {
             <View style={styles.title}>
               <Text>{text.steps.step1.title}</Text>
             </View>
-            <Text style={styles.subTitle}>{text.steps.step1.title}</Text>
-            <View style={styles.line}></View>
+            <Text style={styles.subtitle}>{text.steps.step1.title}</Text>
+            <View style={styles.line} />
             <View style={styles.contentStep}>
               <View style={styles.twoColumn}>
                 <View style={styles.column}>
@@ -108,6 +157,147 @@ const PdfAmendment = ({ text, form, date }) => {
                   </Text>
                 </View>
               </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label3} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__phone}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label4} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__email}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label5} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__document_number}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label6} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__type_organization}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label7} :{" "}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__new_name}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label8} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__principal_address}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label9} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__principal_city}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label10} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__principal_state}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label11} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__principal_zip_code}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label12} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__secondary_address}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label9} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__secondary_city}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.twoColumn}>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label10} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__secondary_state}
+                  </Text>
+                </View>
+                <View style={styles.column}>
+                  <Text style={styles.inputLabel}>
+                    {text.steps.step1.labels.label11} :{" "}
+                  </Text>
+                  <Text style={styles.inputValue}>
+                    {form.company_information__secondary_zip_code}
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </Page>
+      <Page size="LETTER" style={styles.page}>
+        <PdfDesing />
+        <View style={styles.content}>
+          <PdfHeader />
+          <View style={styles.body}>
+            <Text style={styles.subtitle}>{text.steps.step2.title}</Text>
+            <View style={styles.line} />
+            <View style={styles.contentStep}>
+              {form.change_officers__signature_officer1 && (
+                <View style={styles.card}>
+                  <View style={styles.cardInformation}>
+                    {form.change_officers__photo_officer1 && (
+                      <View style={styles.photoContainer}></View>
+                    )}
+                  </View>
+                </View>
+              )}
             </View>
           </View>
         </View>

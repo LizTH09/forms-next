@@ -894,17 +894,19 @@ const PdfRenovation = ({
                   ]}
                 >
                   {form.renovation_authorization__signature_2 && (
-                    <View style={styles.signatureContainer}>
-                      <Image
-                        src={form.renovation_authorization__signature_2}
-                        style={styles.image}
-                      />
-                      <View style={styles.signatureLine}></View>
-                    </View>
+                    <>
+                      <View style={styles.signatureContainer}>
+                        <Image
+                          src={form.renovation_authorization__signature_2}
+                          style={styles.image}
+                        />
+                        <View style={styles.signatureLine}></View>
+                      </View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.renovation_authorization__position_2}
+                      </Text>
+                    </>
                   )}
-                  <Text style={{ fontSize: 10 }}>
-                    {form.renovation_authorization__position_2}
-                  </Text>
                 </View>
                 <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
                   {form.renovation_authorization__complete_name_2}
