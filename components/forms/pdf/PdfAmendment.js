@@ -62,7 +62,7 @@ const PdfAmendment = ({ text, form, date }) => {
       <Page size="LETTER">
         <PDFDesing />
         <View style={stylesPdf.content}>
-          <View style={styles.contactInfoCard} wrap={false}>
+          <View style={stylesPdf.contactInfoCard} wrap={false}>
             <Image src="/assets/infoLogo.jpg" source="Info Logo" />
           </View>
           <View style={stylesPdf.title}>
