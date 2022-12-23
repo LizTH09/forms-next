@@ -27,11 +27,19 @@ Font.register({
 });
 
 const PdfAmendment = ({ text, form, date }) => {
+  const stylesPdf = StyleSheet.create({
+    content: {
+      width: "90vh",
+      display: "flex",
+      flexDirection: "column",
+      position: "relative",
+    },
+  });
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER">
         <PDFDesing />
-        <View>
+        <View style={stylesPdf.content}>
           <Text>COMPANY AMENDMENT</Text>
         </View>
       </Page>
