@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat",
   },
   content: {
-    width: "90vh",
+    width: "90%",
     display: "flex",
     flexDirection: "column",
     position: "relative",
