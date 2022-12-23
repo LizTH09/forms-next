@@ -149,7 +149,6 @@ const PdfAmendment = ({ text, form, date }) => {
                   </Text>
                 </View>
               </View>
-              
             </View>
           </View>
         </View>
