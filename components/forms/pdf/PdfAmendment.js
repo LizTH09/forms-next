@@ -35,38 +35,74 @@ const PdfAmendment = ({ text, form, date }) => {
       flexDirection: "column",
       position: "relative",
     },
+    marginDecoration: {
+      width: "7vw",
+      height: "100vh",
+      backgroundColor: "#2CAF95",
+      position: "absolute",
+      top: 0,
+      left: 0,
+    },
+    desing: {
+      backgroundColor: "#eaeaebd8",
+      marginTop: "6vh",
+      height: "9vh",
+      width: "100%",
+      position: "absolute",
+    },
     contactInfoCard: {
       position: "absolute",
-      right: "20px",
+      right: "6vh",
       top: "6vh",
+      width: "60vw",
+    },
+    image: {
       width: "30vw",
     },
     title: {
+      width: "50vw",
+      height: "9vh",
       position: "absolute",
-      left: 0,
-      top: "-60px",
+      left: "7vh",
+      top: "6vh",
       fontSize: 20,
-      width: "65%",
-      textTransform: "uppercase",
       textAlign: "left",
       fontWeight: "bold",
+      display: "flex",
+      justifyContent: "center",
     },
     subTitle: {
       fontSize: 16,
       fontWeight: "semibold",
       color: "#2CAF95",
     },
+    body: {
+      position: "absolute",
+      backgroundColor: "red",
+      height: "70vh",
+      width: "80vw",
+      top: "15vh",
+      left: "9vw",
+    },
   });
   return (
     <Document title="PDFAmendment">
       <Page size="LETTER">
-        <PDFDesing />
+        <View style={stylesPdf.marginDecoration}>
+          <View style={stylesPdf.desing}></View>
+        </View>
         <View style={stylesPdf.content}>
-          <View style={stylesPdf.contactInfoCard} wrap={false}>
-            <Image src="/assets/infoLogo.jpg" source="Info Logo" />
+          <View style={stylesPdf.contactInfoCard}>
+            <Image
+              style={stylesPdf.image}
+              src="/assets/infoLogo.jpg"
+              source="Info Logo"
+            />
           </View>
           <View style={stylesPdf.title}>
             <Text>COMPANY AMENDMENT</Text>
+          </View>
+          <View style={stylesPdf.body}>
             <Text style={stylesPdf.subTitle}>{text.steps.step1.title}</Text>
           </View>
         </View>

@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  width: 48%;
+  width: 450px;
 }
 
 .signatureButtonsContainer {
@@ -42,7 +42,6 @@
 @media screen and (max-width: 1024px) {
   .sigCanvas{
     width: 100%;
-    
   }
 }
 
