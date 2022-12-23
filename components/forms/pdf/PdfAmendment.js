@@ -33,10 +33,9 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat",
   },
   content: {
-    width: "90%",
+    width: "90vw",
     display: "flex",
     flexDirection: "column",
-    position: "relative",
   },
 });
 const PdfAmendment = ({ text, form, date }) => {
