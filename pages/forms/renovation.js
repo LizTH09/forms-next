@@ -14,6 +14,7 @@ import PdfRenovation from "../../components/forms/pdf/PdfRenovation";
 import ButtonExport from "../../components/forms/pdf/ButtonExport";
 import en from "/public/utils/renovation/en";
 import es from "/public/utils/renovation/es";
+import PdfPrueba from "../../components/forms/pdf/PdfPrueba.JS";
 
 const initialValues = {
   renovation_company_information__company_name: "",
@@ -112,7 +113,7 @@ const Renovation = () => {
         />
         {currentStep == MAX_STEPS && (
           <PDFDownloadLink
-            document={<PdfRenovation text={text} form={form} date={date} />}
+            document={<PdfPrueba text={text} form={form} date={date} />}
             fileName={`renovation.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />
