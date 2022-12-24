@@ -1,0 +1,39 @@
+.overlay {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedorModal {
+  width: 500px;
+  min-height: 200px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(108, 100, 111, 8.2) 8px 7px 29px 8px;
+  padding: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+.encabezadoModal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1766DC;
+}
+.buttonClose{
+
+}

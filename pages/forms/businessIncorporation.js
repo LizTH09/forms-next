@@ -111,14 +111,14 @@ const BusinessIncorporation = () => {
           form={form}
           template="template_4yy2zfw"
         />
-        {currentStep == MAX_STEPS && (
+        {/* {currentStep == MAX_STEPS && (
           <PDFDownloadLink
             document={<PdfIncorporation text={text} form={form} date={date} />}
             fileName={`business-Incorporation.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />
           </PDFDownloadLink>
-        )}
+        )} */}
       </InputContainer>
     </FormContainer>
   );

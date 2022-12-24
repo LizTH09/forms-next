@@ -3,6 +3,7 @@ import styles from "../../styles/forms/StepButtonsControlers.module.css";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import Pdf from "./pdf/PdfAmendment";
 import ButtonExport from "./pdf/ButtonExport";
+import FormModal from "./FormModal";
 
 const StepButtonsControlers = ({
   setCurrentStep,
@@ -30,7 +31,7 @@ const StepButtonsControlers = ({
           currentStep={currentStep}
         />
       )}
-      
+
       {currentStep == maxSteps && (
         <Button
           text={text?.buttons?.send}
@@ -41,6 +42,7 @@ const StepButtonsControlers = ({
           template={template}
         />
       )}
+      {currentStep == maxSteps && <FormModal />}
     </div>
   );
 };
