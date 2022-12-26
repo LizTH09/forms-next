@@ -129,7 +129,7 @@ export default Renovation;
 
 export async function getServerSideProps() {
   try {
-    connectDB();
+    await connectDB();
     const res = await RenovationForm.find({});
     const renovationForms = res.map((doc) => {
       const renovationForm = doc.toObject();

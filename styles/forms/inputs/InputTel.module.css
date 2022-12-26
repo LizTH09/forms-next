@@ -17,7 +17,6 @@
   outline: none;
   padding: 0 0 0 1rem;
   background: none;
-  z-index: 1;
 }
 
 .input input{
@@ -45,7 +44,6 @@
   background-color: rgba(249, 249, 249, 0.916);
   font-size: 12px;
   font-weight: 500;
-  z-index: 5;
 }
 
 .input:not(:placeholder-shown).input:not(:focus) + .inputLabel {
@@ -54,7 +52,6 @@
   background-color: rgba(249, 249, 249, 0.916);
   font-size: 12px;
   font-weight: 500;
-  z-index: 5;
 }
 
 @media screen and (max-width: 1024px) {

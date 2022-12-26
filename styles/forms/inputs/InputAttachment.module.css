@@ -86,7 +86,6 @@
   background-color: rgba(249, 249, 249, 0.916);
   font-size: 12px;
   font-weight: 500;
-  z-index: 5;
 }
 
 @media screen and (max-width: 1024px) {
