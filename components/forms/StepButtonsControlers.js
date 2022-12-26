@@ -4,6 +4,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import Pdf from "./pdf/PdfAmendment";
 import ButtonExport from "./pdf/ButtonExport";
 import FormModal from "./FormModal";
+import { useState } from "react";
 
 const StepButtonsControlers = ({
   setCurrentStep,
@@ -14,6 +15,7 @@ const StepButtonsControlers = ({
   template,
   date,
 }) => {
+  const [activeModal, setActiveModal] = useState(false);
   return (
     <div className={styles.buttonsContainer}>
       {currentStep != 1 && (
@@ -35,14 +37,32 @@ const StepButtonsControlers = ({
       {currentStep == maxSteps && (
         <Button
           text={text?.buttons?.send}
-          type="submit"
+          type="finish"
           setCurrentStep={setCurrentStep}
           currentStep={currentStep}
-          form={form}
-          template={template}
+          // form={form}
+          // template={template}
+          setActiveModal={setActiveModal}
         />
       )}
-      {currentStep == maxSteps && <FormModal />}
+      {activeModal == true && (
+        <FormModal form={form} template={template} setActiveModal={setActiveModal}>
+          <p className={styles.text}>
+            Are you sure the information registered on this form is correct? If
+            all it's correct, ress <span className={styles.boldWord}>Yes</span>{" "}
+            to confirm your registration.
+          </p>
+          <div className={styles.modalButtonsContainer}>
+            <Button
+              text="No"
+              alternative
+              type="cancel"
+              setActiveModal={setActiveModal}
+            />
+            <Button text="Si" type="submit" form={form} template={template} />
+          </div>
+        </FormModal>
+      )}
     </div>
   );
 };

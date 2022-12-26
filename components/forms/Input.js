@@ -10,6 +10,7 @@ const Input = ({
   text,
   id,
   dataType,
+  name,
   dataAccept,
   label,
   form,
@@ -23,6 +24,7 @@ const Input = ({
           text={text?.labels}
           id={id}
           dataAccept={dataAccept}
+          name={name}
           label={label}
           form={form}
           setForm={setForm}

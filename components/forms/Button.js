@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import { useRouter } from "next/router";
 import styles from "../../styles/forms/Button.module.css";
 const Button = ({
   text,
@@ -7,23 +8,23 @@ const Button = ({
   setCurrentStep,
   currentStep,
   form,
-  template
+  template,
+  setActiveModal,
 }) => {
+  // const router = useRouter();
   const handleStep = () => {
     setCurrentStep(alternative ? currentStep - 1 : currentStep + 1);
   };
-  const sendEmail = (e) => {
+  const handleModal = () => {
+    setActiveModal(true);
+  };
+  const handleModalCancel = () => {
+    setActiveModal(false);
+  };
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs
-      .send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ")
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+    console.log(form);
+    emailjs.send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ");
     // .then(router.push(`/forms/payment/${form.code}`));
   };
   return (
@@ -35,6 +36,17 @@ const Button = ({
           value={text}
           onClick={sendEmail}
         />
+      ) : type == "finish" ? (
+        <button className={styles.button} onClick={handleModal}>
+          {text}
+        </button>
+      ) : type == "cancel" ? (
+        <button
+          className={styles.buttonAlternative}
+          onClick={handleModalCancel}
+        >
+          {text}
+        </button>
       ) : (
         <button
           className={alternative ? styles.buttonAlternative : styles.button}

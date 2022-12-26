@@ -4,6 +4,7 @@ const InputText = ({
   text,
   id,
   dataAccept,
+  name,
   label,
   form,
   setForm,
@@ -16,6 +17,7 @@ const InputText = ({
           <input
             className={styles.input}
             id={id}
+            name = {name}
             value={form[id]}
             placeholder=" "
             required={required}

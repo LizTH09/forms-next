@@ -1,14 +1,15 @@
 import styles from "/styles/forms/inputs/InputNumber.module.css";
 
 const InputNumber = ({
-  text,
-  id,
   dataType,
   dataAccept,
-  label,
   form,
-  setForm,
+  name,
+  id,
+  label,
   required,
+  setForm,
+  text,
 }) => {
   return (
     <div className={styles.inputContainer}>
@@ -17,6 +18,7 @@ const InputNumber = ({
         id={id}
         value={form[id]}
         type="number"
+        name = {name}
         placeholder=" "
         required={required}
         onChange={(e) => setForm({ ...form, [id]: e.target.value })}

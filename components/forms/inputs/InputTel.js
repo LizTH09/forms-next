@@ -8,6 +8,7 @@ const InputTel = ({
   id,
   dataType,
   dataAccept,
+  name,
   label,
   form,
   setForm,
@@ -25,6 +26,7 @@ const InputTel = ({
         id={id}
         value={value}
         placeholder=" "
+        name = {name}
         required={required}
         onChange={setValue}
       ></PhoneInput>

@@ -20,6 +20,7 @@ const Form = ({
               text={text.steps[`step${currentStep}`]}
               id={input.id}
               dataType={input.dataType}
+              name = {input.name}
               dataAccept={input.dataAccept}
               label={input.label}
               form={form}

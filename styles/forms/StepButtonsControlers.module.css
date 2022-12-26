@@ -1,12 +1,26 @@
-.buttonsContainer{
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.boldWord {
+  font-weight: 500;
+}
+
+.modalButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 20px;
 }
 
 @media screen and (max-width: 480px) {
-    .buttonsContainer{
-        flex-direction: column-reverse;
-        height: 150px;
-    }
+  .buttonsContainer {
+    flex-direction: column-reverse;
+    height: 150px;
+  }
 }
