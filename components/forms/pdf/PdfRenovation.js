@@ -11,22 +11,22 @@ import {
 } from "@react-pdf/renderer";
 import PdfDesing from "./PdfDesing";
 import PdfHeader from "./PdfHeader";
-Font.register({
-  family: "Montserrat",
-  fonts: [
-    {
-      src: "https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf",
-    },
-    {
-      src: "https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf",
-      fontWeight: "semibold",
-    },
-    {
-      src: "https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf",
-      fontWeight: "bold",
-    },
-  ],
-});
+// Font.register({
+//   family: "Montserrat",
+//   fonts: [
+//     {
+//       src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf",
+//     },
+//     {
+//       src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf",
+//       fontWeight: "semibold",
+//     },
+//     {
+//       src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf",
+//       fontWeight: "bold",
+//     },
+//   ],
+// });
 const PdfRenovation = ({
   text,
   form,
@@ -40,7 +40,7 @@ const PdfRenovation = ({
     completePage: {
       display: "flex",
       flexDirection: "row",
-      fontFamily: "Montserrat",
+      // fontFamily: "Montserrat",
       width: "100vw",
       height: "100vh",
     },

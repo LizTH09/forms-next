@@ -76,7 +76,10 @@ const initialValues = {
 };
 
 const Renovation = () => {
-  const date = new Date();
+  const day = new Date().getDate();
+  const month = new Date().getMonth() + 1;
+  const year = new Date().getFullYear();
+  const date = month + " / " + day + " / " + year;
   const [language, setLanguage] = useState("en");
   const [currentStep, setCurrentStep] = useState(1);
   const [text, setText] = useState(en);
@@ -95,7 +98,7 @@ const Renovation = () => {
         <FormHeader
           title={text?.steps[`step${currentStep}`]?.title}
           description={text?.steps[`step${currentStep}`]?.description}
-          date={date.toLocaleDateString()}
+          date={date}
         />
         <Form
           inputs={inputs}
