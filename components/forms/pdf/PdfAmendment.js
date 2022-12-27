@@ -112,140 +112,140 @@ const PdfAmendment = ({ text, form, date }) => {
             <Text style={stylesPdf.subTitle}>{text.steps.step1.title}</Text>
             <View style={stylesPdf.line}></View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label1} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__company_name}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label2} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__tax_id}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label3} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__phone}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label4} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__email}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label5} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__document_number}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label6} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__type_organization}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label7} :{" "}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputValue}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__new_name}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label8} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__principal_address}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label9} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__principal_city}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label10} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__principal_state}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label11} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__principal_zip_code}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label12} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__secondary_address}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label9} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__secondary_city}
               </Text>
             </View>
           </View>
-          <View style={stylesPdftwoColumn}>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+          <View style={stylesPdf.twoColumn}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label10} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__secondary_state}
               </Text>
             </View>
-            <View style={stylesPdfcolumn}>
-              <Text style={stylesPdfinputLabel}>
+            <View style={stylesPdf.column}>
+              <Text style={stylesPdf.inputLabel}>
                 {text.steps.step1.labels.label11} :{" "}
               </Text>
-              <Text style={stylesPdfinputValue}>
+              <Text style={stylesPdf.inputValue}>
                 {form.company_information__secondary_zip_code}
               </Text>
             </View>
@@ -255,5 +255,6 @@ const PdfAmendment = ({ text, form, date }) => {
     </Document>
   );
 };
+
 
 export default PdfAmendment;
