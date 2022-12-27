@@ -1,4 +1,4 @@
-import connectDB from "../../lib/dbConnection";
+// import connectDB from "../../lib/dbConnection";
 import NavBar from "/components/forms/NavBar";
 import FormContainer from "/components/forms/FormContainer";
 import { useEffect, useState } from "react";
@@ -14,7 +14,7 @@ import PdfRenovation from "../../components/forms/pdf/PdfRenovation";
 import ButtonExport from "../../components/forms/pdf/ButtonExport";
 import en from "/public/utils/renovation/en";
 import es from "/public/utils/renovation/es";
-import RenovationForm from "../../models/RenovationForm";
+// import RenovationForm from "../../models/RenovationForm";
 // import RenovationForm from "../../models/RenovationForm";
 
 const initialValues = {
@@ -127,18 +127,18 @@ const Renovation = () => {
 
 export default Renovation;
 
-export async function getServerSideProps() {
-  try {
-    await connectDB();
-    const res = await RenovationForm.find({});
-    const renovationForms = res.map((doc) => {
-      const renovationForm = doc.toObject();
-      renovationForm._id = `${renovationForm._id}`;
-      return renovationForm;
-    });
-    console.log(res);
-    return { props: { renovationForms } };
-  } catch (error) {
-    console.log(error);
-  }
-}
+// export async function getServerSideProps() {
+//   try {
+//     await connectDB();
+//     const res = await RenovationForm.find({});
+//     const renovationForms = res.map((doc) => {
+//       const renovationForm = doc.toObject();
+//       renovationForm._id = `${renovationForm._id}`;
+//       return renovationForm;
+//     });
+//     console.log(res);
+//     return { props: { renovationForms } };
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
