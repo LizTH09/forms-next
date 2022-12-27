@@ -112,14 +112,14 @@ const Renovation = () => {
           form={form}
           template="template_4yy2zfw"
         />
-        {/* {currentStep == MAX_STEPS && (
+        {currentStep == MAX_STEPS && (
           <PDFDownloadLink
             document={<PdfRenovation text={text} form={form} date={date} />}
             fileName={`renovation.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />
           </PDFDownloadLink>
-        )} */}
+        )}
       </InputContainer>
     </FormContainer>
   );
