@@ -11,22 +11,22 @@ import {
 } from "@react-pdf/renderer";
 import PdfDesing from "./PdfDesing";
 import PdfHeader from "./PdfHeader";
-Font.register({
-  family: "Montserrat",
-  fonts: [
-    {
-      src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf",
-    },
-    {
-      src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf",
-      fontWeight: "semibold",
-    },
-    {
-      src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf",
-      fontWeight: "bold",
-    },
-  ],
-});
+// Font.register({
+//   family: "Montserrat",
+//   fonts: [
+//     {
+//       src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf",
+//     },
+//     {
+//       src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-Y3tcoqK5.ttf",
+//       fontWeight: "semibold",
+//     },
+//     {
+//       src: "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-Y3tcoqK5.ttf",
+//       fontWeight: "bold",
+//     },
+//   ],
+// });
 const PdfIncorporation = ({
   text,
   form,
@@ -40,33 +40,31 @@ const PdfIncorporation = ({
     page: {
       display: "flex",
       flexDirection: "row",
-      fontFamily: "Montserrat",
+      // fontFamily: "Montserrat",
     },
     content: {
       width: "90vh",
       display: "flex",
       flexDirection: "column",
-      // backgroundColor: "red",
       position: "relative",
     },
     body: {
       marginLeft: 61,
       marginRight: 80,
-      marginVertical: 15,
+      marginTop: 130,
       marginBottom: 40,
     },
     title: {
-      // backgroundColor: "blue",
+      width: "50vw",
+      height: "9vh",
       position: "absolute",
-      left: 0,
-      top: "-60px",
-      fontSize: 20,
-      width: "65%",
-      textTransform: "uppercase",
+      left: "4vh",
+      top: "9vh",
+      fontSize: 24,
       textAlign: "left",
-      fontWeight: "bold",
+      fontWeight: "medium",
       display: "flex",
-      flexWrap: "wrap",
+      justifyContent: "center",
     },
     line: {
       width: "100%",
@@ -145,7 +143,7 @@ const PdfIncorporation = ({
       alignItems: "center",
       margingTop: "30px",
       height: "80px",
-      width: "60px",
+      width: "100px",
     },
     signatureLine: {
       height: 1,
@@ -169,6 +167,7 @@ const PdfIncorporation = ({
     image: {
       width: 80,
       height: 60,
+      alignSelf: "center",
     },
   });
 
@@ -178,11 +177,10 @@ const PdfIncorporation = ({
         <PdfDesing />
         <View style={styles.content}>
           <PdfHeader />
+          <Text style={styles.title}>Business Information</Text>
           <View style={styles.body}>
-            <View style={styles.title}>
-              <Text>Business</Text>
-              <Text>Information</Text>
-            </View>
+            <Text style={styles.subTitle}>{text.steps.step1.title}</Text>
+            <View style={styles.line}></View>
             {/* //----------------------- PERSONAL INFORMATION ---------------------------- */}
             <View style={styles.personalInformation}>
               <View
@@ -207,7 +205,7 @@ const PdfIncorporation = ({
                 </View>
                 <View style={{ display: "flex", flexDirection: "row" }}>
                   <Text style={styles.blueLetter}>P: </Text>
-                  <Text>{form.personal_information__phone}</Text>
+                  <Text style={{color:"#2CAF95"}}>{form.personal_information__phone}</Text>
                 </View>
                 <View style={{ display: "flex", flexDirection: "row" }}>
                   <Text style={styles.blackLetter}>A: </Text>
@@ -299,22 +297,18 @@ const PdfIncorporation = ({
                 </Text>
               </View>
               <View>
-                <Text style={styles.textElement}>
-                  {text.steps.step2.labels.label2} :{" "}
-                  {
-                    text.steps.step2.options.label2[
-                      `${form.corporate_name__type_organization}`
-                    ]
-                  }
+                <Text style={[styles.textElement, {fontSize: 14}]}>
+                  {text.steps.step2.labels.label2} :
+                  <Text style={{fontSize: 12}}>
+                  {form.corporate_name__type_organization}
+                  </Text>
                 </Text>
-                <Text style={styles.textElement}>
-                  {text.steps.step2.labels.label3} :{" "}
-                  {
-                    text.steps.step2.options.label3[
-                      `${form.corporate_name__type_form}`
-                    ]
-                  }
+                <Text style={[styles.textElement, {fontSize: 14}]}>
+                  {text.steps.step2.labels.label3} :
                 </Text>
+                <Text style={{fontSize: 12}}>
+                  {form.corporate_name__type_form}
+                  </Text>
               </View>
             </View>
           </View>
@@ -682,6 +676,7 @@ const PdfIncorporation = ({
           <PdfHeader />
           <View style={styles.body}>
             <Text style={styles.subTitle}>{text.steps.step4.title}</Text>
+            <View style={styles.line}></View>
             <View
               style={[
                 styles.text,
@@ -693,7 +688,7 @@ const PdfIncorporation = ({
               ]}
             >
               <View>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5, fontSize: 14 }}>
                   {text.steps.step4.labels.label1} :{" "}
                 </Text>
                 <Text
@@ -705,7 +700,7 @@ const PdfIncorporation = ({
                 >
                   {form.register_agent__complete_name}
                 </Text>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5, fontSize: 14 }}>
                   {text.steps.step4.labels.label2} :{" "}
                 </Text>
                 <Text
@@ -719,7 +714,14 @@ const PdfIncorporation = ({
                 </Text>
               </View>
               {form.register_agent__signature && (
-                <View style={styles.signatureContainer}>
+                <View
+                  style={[
+                    styles.signatureContainer,
+                    {
+                      alignItems: "center",
+                    },
+                  ]}
+                >
                   <Image
                     src={form.register_agent__signature}
                     style={styles.image}
@@ -731,15 +733,16 @@ const PdfIncorporation = ({
             </View>
             {/* --------------------------- APPLICANT INFORMATION ----------------------- */}
             <Text style={styles.subTitle}>{text.steps.step5.title}</Text>
+            <View style={styles.line}></View>
             <View style={styles.text}>
               <View>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5, fontSize: 14 }}>
                   {text.steps.step5.labels.label1} :{" "}
                 </Text>
                 <Text style={{ paddingVertical: 10, paddingHorizontal: 15 }}>
                   {form.applicant_information__complete_name}
                 </Text>
-                <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                <Text style={{ fontWeight: "semibold", paddingVertical: 5, fontSize: 14 }}>
                   {text.steps.step5.labels.label2} :{" "}
                 </Text>
                 <Text style={{ paddingVertical: 10, paddingHorizontal: 15 }}>
@@ -749,10 +752,11 @@ const PdfIncorporation = ({
             </View>
             {/* -----------------------NATURE OF BUSINESS------------------------------- */}
             <Text style={styles.subTitle}>{text.steps.step6.title}</Text>
+            <View style={styles.line}></View>
             <View style={styles.text}>
               <View style={{ display: "flex", flexDirection: "row" }}>
                 <Text
-                  style={{ fontWeight: "semibold", paddingVertical: 5 }}
+                  style={{ fontWeight: "semibold", paddingVertical: 5, fontSize: 14 }}
                   break
                 >
                   {text.steps.step6.labels.label1} :
@@ -773,6 +777,7 @@ const PdfIncorporation = ({
                   flexDirection: "row",
                   height: "100px",
                   paddingLeft: "20px",
+                  marginTop: 30,
                 }}
               >
                 ////////////////////////////////////////////
@@ -781,6 +786,7 @@ const PdfIncorporation = ({
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
+                    alignItems: "center",
                     width: "120px",
                   }}
                 >
@@ -801,6 +807,7 @@ const PdfIncorporation = ({
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
+                    alignItems: "center",
                     marginLeft: "20px",
                     width: "120px",
                   }}
@@ -824,6 +831,7 @@ const PdfIncorporation = ({
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
+                    alignItems: "center",
                     marginLeft: "20px",
                     width: "120px",
                   }}

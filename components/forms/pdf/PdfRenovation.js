@@ -51,22 +51,22 @@ const PdfRenovation = ({
       position: "relative",
     },
     body: {
-      marginLeft: 61,
+      marginLeft: 31,
       marginRight: 80,
-      marginVertical: 15,
+      marginTop: 130,
       marginBottom: 40,
     },
     title: {
+      width: "50vw",
+      height: "9vh",
       position: "absolute",
-      left: 0,
-      top: "60px",
-      fontSize: 20,
-      width: "65%",
-      textTransform: "uppercase",
+      left: "4vh",
+      top: "9vh",
+      fontSize: 24,
       textAlign: "left",
-      fontWeight: "bold",
+      fontWeight: "medium",
       display: "flex",
-      flexWrap: "wrap",
+      justifyContent: "center",
     },
     line: {
       width: "100%",
@@ -82,16 +82,26 @@ const PdfRenovation = ({
       fontWeight: "semibold",
       textAlign: "center",
     },
-    personalInformation: {
+    subTitle: {
+      fontSize: 18,
+      fontWeight: 700,
+      color: "#2CAF95",
+    },
+    contentStep: {
+      width: "93vw",
+      display: "flex",
+      flexDirection: "column",
+      gap: "20px",
+      justifyContent: "space-between",
+      margin: 5,
+      // marginLeft: "10vw",
+      // marginTop: "5vh",
+      marginBottom: 20,
+    },
+    twoColumn: {
       display: "flex",
       flexDirection: "row",
-      fontSize: 11,
-      marginBottom: 15,
-    },
-    subTitle: {
-      fontSize: 16,
-      fontWeight: "semibold",
-      color: "#2CAF95",
+      justifyContent: "space-between",
     },
     column: {
       display: "flex",
@@ -99,20 +109,17 @@ const PdfRenovation = ({
       width: "530px",
       gap: "8px",
     },
-    textColumn: {
-      width: 60,
-      paddingTop: 5,
-      paddingBottom: 10,
-    },
-    twoColumn: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-    },
-    inputInformation: {
+    inputLabel: {
       fontWeight: "semibold",
+      fontSize: 14,
       paddingVertical: 5,
       width: "100%",
+    },
+    inputValue: {
+      fontSize: 12,
+      paddingTop: 5,
+      paddingBottom: 10,
+      paddingLeft: 10,
     },
     text: {
       fontSize: 12,
@@ -169,6 +176,19 @@ const PdfRenovation = ({
       width: 80,
       height: 60,
     },
+    section: {
+      marginTop: 20,
+      width: "80vw",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      position: "relative",
+    },
+    sectionLine: {
+      height: "3px",
+      width: "80vw",
+      backgroundColor: "#e1e2e2d3",
+    },
   });
 
   return (
@@ -178,186 +198,143 @@ const PdfRenovation = ({
           <PdfDesing />
           <View style={styles.content}>
             <PdfHeader />
+            <Text style={styles.title}>Renovation Form</Text>
             <View style={styles.body}>
-              <Text style={styles.title}>Renovation Form</Text>
-              <View
-                style={[
-                  styles.text,
-                  {
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                  },
-                ]}
-              >
+              <Text style={styles.subTitle}>{text.steps.step1.title}</Text>
+              <View style={styles.line}></View>
+              <View style={styles.contentStep}>
                 <View>
                   <View style={styles.twoColumn}>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label1} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__company_name}
                       </Text>
                     </View>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label2} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__tax_id}
                       </Text>
                     </View>
                   </View>
                   <View style={styles.twoColumn}>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label3} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__phone}
                       </Text>
                     </View>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label4} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__email}
                       </Text>
                     </View>
                   </View>
                   <View style={styles.twoColumn}>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label5} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__document_number}
                       </Text>
                     </View>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label6} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__type_organization}
                       </Text>
                     </View>
                   </View>
+                  <View style={styles.section}>
+                    <View style={styles.line}></View>
+                  </View>
                   <View style={styles.twoColumn}>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label7} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__new_address}
                       </Text>
                     </View>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label8} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__new_city}
                       </Text>
                     </View>
                   </View>
                   <View style={styles.twoColumn}>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label9} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__new_state}
                       </Text>
                     </View>
-                    <View style={styles.textColumn}>
-                      <Text
-                        style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                      >
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
                         {text.steps.step1.labels.label10} :{" "}
                       </Text>
-                      <Text
-                        style={{
-                          paddingTop: 5,
-                          paddingBottom: 10,
-                          paddingHorizontal: 15,
-                        }}
-                      >
+                      <Text style={styles.inputValue}>
                         {form.renovation_company_information__new_zip_code}
+                      </Text>
+                    </View>
+                  </View>
+                  <View style={styles.section}>
+                    <View style={styles.line}></View>
+                  </View>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
+                        {text.steps.step1.labels.label7} :{" "}
+                      </Text>
+                      <Text style={styles.inputValue}>
+                        {form.renovation_company_information__reference_address}
+                      </Text>
+                    </View>
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
+                        {text.steps.step1.labels.label8} :{" "}
+                      </Text>
+                      <Text style={styles.inputValue}>
+                        {form.renovation_company_information__reference_city}
+                      </Text>
+                    </View>
+                  </View>
+                  <View style={styles.twoColumn}>
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
+                        {text.steps.step1.labels.label9} :{" "}
+                      </Text>
+                      <Text style={styles.inputValue}>
+                        {form.renovation_company_information__reference_state}
+                      </Text>
+                    </View>
+                    <View style={styles.column}>
+                      <Text style={styles.inputLabel}>
+                        {text.steps.step1.labels.label10} :{" "}
+                      </Text>
+                      <Text style={styles.inputValue}>
+                        {
+                          form.renovation_company_information__reference_zip_code
+                        }
                       </Text>
                     </View>
                   </View>
@@ -828,7 +805,7 @@ const PdfRenovation = ({
                     },
                   ]}
                 >
-                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  <Text style={styles.inputLabel}>
                     {text.steps.step3.labels.label1} :{" "}
                   </Text>
                   <Text
@@ -840,7 +817,7 @@ const PdfRenovation = ({
                   >
                     {form.renovation_agent_register__complete_name}
                   </Text>
-                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  <Text style={styles.inputLabel}>
                     {text.steps.step3.labels.label2} :{" "}
                   </Text>
                   <Text
@@ -858,6 +835,7 @@ const PdfRenovation = ({
                 {form.renovation_authorization__signature_1 && (
                   <View
                     style={{
+                      marginLeft: 30,
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
@@ -866,7 +844,12 @@ const PdfRenovation = ({
                     <View
                       style={[
                         styles.signatureContainer,
-                        { width: 90, height: 70, marginBottom: 30 },
+                        {
+                          width: 90,
+                          height: 70,
+                          marginBottom: 30,
+                          marginLeft: 20,
+                        },
                       ]}
                     >
                       <Image
@@ -878,40 +861,42 @@ const PdfRenovation = ({
                         {form.renovation_authorization__position_1}
                       </Text>
                     </View>
-                    <Text
-                      style={{ fontWeight: "semibold", paddingVertical: 5 }}
-                    >
+                    <Text style={[styles.inputLabel, { marginLeft: 10 }]}>
                       {form.renovation_authorization__complete_name_1}
                     </Text>
                   </View>
                 )}
                 <View
                   style={{
+                    marginLeft: 30,
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
                   }}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70, marginBottom: 30 },
-                    ]}
-                  >
-                    {form.renovation_authorization__signature_2 && (
-                      <View style={styles.signatureContainer}>
-                        <Image
-                          src={form.renovation_authorization__signature_2}
-                          style={styles.image}
-                        />
-                        <View style={styles.signatureLine}></View>
-                      </View>
-                    )}
-                    <Text style={{ fontSize: 10 }}>
-                      {form.renovation_authorization__position_2}
-                    </Text>
-                  </View>
-                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {form.renovation_authorization__signature_2 && (
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        {
+                          width: 90,
+                          height: 70,
+                          marginBottom: 30,
+                          marginLeft: 20,
+                        },
+                      ]}
+                    >
+                      <Image
+                        src={form.renovation_authorization__signature_2}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.renovation_authorization__position_2}
+                      </Text>
+                    </View>
+                  )}
+                  <Text style={[styles.inputLabel, { marginLeft: 10 }]}>
                     {form.renovation_authorization__complete_name_2}
                   </Text>
                 </View>
@@ -920,28 +905,32 @@ const PdfRenovation = ({
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
+                    marginLeft: 30,
                   }}
                 >
-                  <View
-                    style={[
-                      styles.signatureContainer,
-                      { width: 90, height: 70, marginBottom: 30 },
-                    ]}
-                  >
-                    {form.renovation_authorization__signature_3 && (
-                      <View style={styles.signatureContainer}>
-                        <Image
-                          src={form.renovation_authorization__signature_3}
-                          style={styles.image}
-                        />
-                        <View style={styles.signatureLine}></View>
-                      </View>
-                    )}
-                    <Text style={{ fontSize: 10 }}>
-                      {form.renovation_authorization__position_3}
-                    </Text>
-                  </View>
-                  <Text style={{ fontWeight: "semibold", paddingVertical: 5 }}>
+                  {form.renovation_authorization__signature_3 && (
+                    <View
+                      style={[
+                        styles.signatureContainer,
+                        {
+                          width: 90,
+                          height: 70,
+                          marginBottom: 30,
+                          marginLeft: 20,
+                        },
+                      ]}
+                    >
+                      <Image
+                        src={form.renovation_authorization__signature_3}
+                        style={styles.image}
+                      />
+                      <View style={styles.signatureLine}></View>
+                      <Text style={{ fontSize: 10 }}>
+                        {form.renovation_authorization__position_3}
+                      </Text>
+                    </View>
+                  )}
+                  <Text style={[styles.inputLabel, { marginLeft: 10 }]}>
                     {form.renovation_authorization__complete_name_3}
                   </Text>
                 </View>
