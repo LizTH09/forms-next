@@ -59,7 +59,7 @@ const PdfRenovation = ({
     title: {
       position: "absolute",
       left: 0,
-      top: "-60px",
+      top: "60px",
       fontSize: 20,
       width: "65%",
       textTransform: "uppercase",

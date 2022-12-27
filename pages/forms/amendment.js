@@ -112,14 +112,14 @@ const Amendment = () => {
           template="template_z06210s"
           date={date.toLocaleDateString("en-US")}
         />
-        {/* {currentStep == MAX_STEPS && (
+        {currentStep == MAX_STEPS && (
           <PDFDownloadLink
             document={<PdfAmendment text={text} form={form} date={date} />}
             fileName={`amendment.pdf`}
           >
             <ButtonExport text={text?.buttons?.download} />
           </PDFDownloadLink>
-        )} */}
+        )}
       </InputContainer>
     </FormContainer>
   );
