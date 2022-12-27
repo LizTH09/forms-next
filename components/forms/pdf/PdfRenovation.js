@@ -48,7 +48,6 @@ const PdfRenovation = ({
       width: "90vh",
       display: "flex",
       flexDirection: "column",
-      // backgroundColor: "red",
       position: "relative",
     },
     body: {
@@ -58,7 +57,6 @@ const PdfRenovation = ({
       marginBottom: 40,
     },
     title: {
-      // backgroundColor: "blue",
       position: "absolute",
       left: 0,
       top: "-60px",
@@ -102,7 +100,6 @@ const PdfRenovation = ({
       gap: "8px",
     },
     textColumn: {
-      // marginLeft: "20px",
       width: 60,
       paddingTop: 5,
       paddingBottom: 10,
@@ -167,7 +164,6 @@ const PdfRenovation = ({
     photo: {
       borderRadius: "15px",
       height: "100%",
-      // maxWidth: "120px",
     },
     image: {
       width: 80,
@@ -183,7 +179,7 @@ const PdfRenovation = ({
           <View style={styles.content}>
             <PdfHeader />
             <View style={styles.body}>
-              <Text style={styles.title}>{text.title}</Text>
+              <Text style={styles.title}>Renovation Form</Text>
               <View
                 style={[
                   styles.text,
