@@ -7,7 +7,7 @@ const FormModal = ({ children, setActiveModal }) => {
       <div className={styles.overlay}>
         <div className={styles.contenedorModal}>
           <div className={styles.encabezadoModal}>
-            <h3 className={styles.title}>¡IMPORTANTE!</h3>
+            <h3 className={styles.title}> ¡IMPORTANTE! </h3>
           </div>
           <button className={styles.buttonClose} onClick={() => setActiveModal(false)}>
             <svg
