@@ -33,17 +33,17 @@ const Button = ({
   return (
     <>
       {type == "submit" ? (
-        <PDFDownloadLink
-          document={<PdfRenovation text={text} form={form} date={date} />}
-          fileName={`renovation.pdf`}
-        >
+        // <PDFDownloadLink
+        //   document={<PdfRenovation text={text} form={form} date={date} />}
+        //   fileName={`renovation.pdf`}
+        // >
           <input
             className={styles.button}
             type="submit"
             value="Yes"
             onClick={sendEmail}
           />
-        </PDFDownloadLink>
+        // </PDFDownloadLink>
       ) : type == "finish" ? (
         <button className={styles.button} onClick={handleModal}>
           {text}
