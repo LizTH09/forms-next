@@ -1,4 +1,4 @@
-// // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 // import connectDB from "../../../lib/dbConnection";
 // import RenovationForm from "../../../models/RenovationForm";
@@ -13,7 +13,7 @@
 //         await renovationForm.save();
 //         return res.status(200).json({ success: true }, renovationForm);
 //       } catch (error) {
-//         return res.status(400).json({ success: false, error });
+//         return res.status(400).json({ success: false, error: "Error, falla de servidor" });
 //       }
 
 //     default:

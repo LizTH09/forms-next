@@ -303,7 +303,7 @@ const PdfRenovation = ({
                   <View style={styles.twoColumn}>
                     <View style={styles.column}>
                       <Text style={styles.inputLabel}>
-                        {text.steps.step1.labels.label7} :{" "}
+                        Reference Address :{" "}
                       </Text>
                       <Text style={styles.inputValue}>
                         {form.renovation_company_information__reference_address}

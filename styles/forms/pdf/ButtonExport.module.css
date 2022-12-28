@@ -1,6 +1,5 @@
 .container{
     display: flex;
-    position: relative;
 }
 
 .button, .buttonAlternative{
@@ -19,8 +18,7 @@
 .button{
     background-color: #25c89c;
     color: white;
-    position: absolute;
-    transform: translateY(-60px);
+    transform: translateY(-50px);
 }
 
 @media screen and (max-width: 480px) {

@@ -25,13 +25,30 @@ const Button = ({
   const handleModalCancel = () => {
     setActiveModal(false);
   };
-  const sendEmail = () => {
+  const sendEmail = (e) => {
     e.preventDefault();
+    // postData(form);
     emailjs
       .send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ")
       .then(router.push("/"));
     // .then(router.push(`/forms/payment/${form.code}`));
   };
+  // const postData = async (form) => {
+  //   try {
+  //     console.log(form);
+  //     const res = await fetch("/api/renovation/renovationForm.js", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-type": "application/json",
+  //       },
+  //       body: JSON.stringify(form),
+  //     });
+  //     const data = await res.json()
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   return (
     <>
       {type == "submit" ? (
