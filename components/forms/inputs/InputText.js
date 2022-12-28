@@ -23,7 +23,7 @@ const InputText = ({
             required={required}
             onChange={(e) => setForm({ ...form, [id]: e.target.value })}
           ></input>
-          <label className={styles.inputLabel}>{text[label]}</label>
+          <label className={styles.inputLabel} htmlFor={id}>{text[label]}</label>
         </div>
       )}
     </>

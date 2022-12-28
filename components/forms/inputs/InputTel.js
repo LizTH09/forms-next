@@ -30,7 +30,7 @@ const InputTel = ({
         required={required}
         onChange={setValue}
       ></PhoneInput>
-      <label className={styles.inputLabel}>{text[label]}</label>
+      <label className={styles.inputLabel} htmlFor={id}>{text[label]}</label>
     </div>
   );
 };
