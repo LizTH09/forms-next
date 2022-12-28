@@ -1,6 +1,9 @@
 import emailjs from "@emailjs/browser";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useRouter } from "next/router";
 import styles from "../../styles/forms/Button.module.css";
+import ButtonExport from "./pdf/ButtonExport";
+import PdfRenovation from "./pdf/PdfRenovation";
 const Button = ({
   text,
   alternative = false,
@@ -10,6 +13,7 @@ const Button = ({
   form,
   template,
   setActiveModal,
+  date,
 }) => {
   // const router = useRouter();
   const handleStep = () => {
@@ -21,21 +25,25 @@ const Button = ({
   const handleModalCancel = () => {
     setActiveModal(false);
   };
-  const sendEmail = async (e) => {
-    e.preventDefault();
-    console.log(form);
-    emailjs.send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ");
+  const sendEmail = () => {
+    // e.preventDefault();
+    // emailjs.send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ");
     // .then(router.push(`/forms/payment/${form.code}`));
   };
   return (
     <>
       {type == "submit" ? (
-        <input
-          className={styles.button}
-          type="submit"
-          value={text}
-          onClick={sendEmail}
-        />
+        <PDFDownloadLink
+          document={<PdfRenovation text={text} form={form} date={date} />}
+          fileName={`renovation.pdf`}
+        >
+          <input
+            className={styles.button}
+            type="submit"
+            value="Yes"
+            onClick={sendEmail}
+          />
+        </PDFDownloadLink>
       ) : type == "finish" ? (
         <button className={styles.button} onClick={handleModal}>
           {text}

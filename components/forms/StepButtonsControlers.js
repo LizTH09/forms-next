@@ -59,7 +59,7 @@ const StepButtonsControlers = ({
               type="cancel"
               setActiveModal={setActiveModal}
             />
-            <Button text="Si" type="submit" form={form} template={template} />
+            <Button text={text} type="submit" form={form} template={template} date={date}/>
           </div>
         </FormModal>
       )}
