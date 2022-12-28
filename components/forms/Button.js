@@ -15,7 +15,7 @@ const Button = ({
   setActiveModal,
   date,
 }) => {
-  // const router = useRouter();
+  const router = useRouter();
   const handleStep = () => {
     setCurrentStep(alternative ? currentStep - 1 : currentStep + 1);
   };
@@ -26,8 +26,10 @@ const Button = ({
     setActiveModal(false);
   };
   const sendEmail = () => {
-    // e.preventDefault();
-    // emailjs.send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ");
+    e.preventDefault();
+    emailjs
+      .send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ")
+      .then(router.push("/"));
     // .then(router.push(`/forms/payment/${form.code}`));
   };
   return (
@@ -37,14 +39,14 @@ const Button = ({
         //   document={<PdfRenovation text={text} form={form} date={date} />}
         //   fileName={`renovation.pdf`}
         // >
-          <input
-            className={styles.button}
-            type="submit"
-            value="Yes"
-            onClick={sendEmail}
-          />
-        // </PDFDownloadLink>
-      ) : type == "finish" ? (
+        <input
+          className={styles.button}
+          type="submit"
+          value="Yes"
+          onClick={sendEmail}
+        />
+      ) : // </PDFDownloadLink>
+      type == "finish" ? (
         <button className={styles.button} onClick={handleModal}>
           {text}
         </button>
