@@ -1,7 +1,7 @@
 .buttonsContainer {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 14px;
   margin-top: 20px;
 }
 .boldWord {

@@ -14,6 +14,7 @@ const StepButtonsControlers = ({
   form,
   template,
   date,
+  setHydeDownload,
 }) => {
   const [activeModal, setActiveModal] = useState(false);
   return (
@@ -43,13 +44,14 @@ const StepButtonsControlers = ({
           // form={form}
           // template={template}
           setActiveModal={setActiveModal}
+          setHydeDownload={setHydeDownload}
         />
       )}
       {activeModal == true && (
         <FormModal form={form} template={template} setActiveModal={setActiveModal}>
           <p className={styles.text}>
             Are you sure the information registered on this form is correct? If
-            all it's correct, ress <span className={styles.boldWord}>Yes</span>{" "}
+            all it's correct, press <span className={styles.boldWord}>Yes</span>{" "}
             to confirm your registration.
           </p>
           <div className={styles.modalButtonsContainer}>

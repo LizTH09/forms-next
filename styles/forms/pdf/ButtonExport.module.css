@@ -1,10 +1,11 @@
 .container{
     display: flex;
+    justify-content: end;
 }
 
 .button, .buttonAlternative{
     all: unset;
-    width: 9em;
+    width: 19em;
     height: 40px;
     text-align: center;
     border: 1.5px solid #25c89c;
@@ -18,7 +19,8 @@
 .button{
     background-color: #25c89c;
     color: white;
-    transform: translateY(-50px);
+    /* transform: translateY(-50px); */
+    justify-self: end;
 }
 
 @media screen and (max-width: 480px) {

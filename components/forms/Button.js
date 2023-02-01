@@ -1,9 +1,6 @@
 import emailjs from "@emailjs/browser";
-import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useRouter } from "next/router";
 import styles from "../../styles/forms/Button.module.css";
-import ButtonExport from "./pdf/ButtonExport";
-import PdfRenovation from "./pdf/PdfRenovation";
 const Button = ({
   text,
   alternative = false,
@@ -11,63 +8,68 @@ const Button = ({
   setCurrentStep,
   currentStep,
   form,
-  template,
   setActiveModal,
-  date,
+  setHydeDownload,
+  template
 }) => {
   const router = useRouter();
   const handleStep = () => {
     setCurrentStep(alternative ? currentStep - 1 : currentStep + 1);
   };
   const handleModal = () => {
+    setHydeDownload(true);
     setActiveModal(true);
   };
   const handleModalCancel = () => {
     setActiveModal(false);
+    setHydeDownload(false);
   };
-  const sendEmail = (e) => {
+  const sendEmail = async(e) => {
     e.preventDefault();
-    // postData(form);
+    await postData(form);
+
+    /*VOLVER A ACTIVAR*/
+
     emailjs
       .send("service_k187wmh", template, form, "xa8yYdLQeKh8mvwuJ")
       .then(router.push("/"));
     // .then(router.push(`/forms/payment/${form.code}`));
   };
-  // const postData = async (form) => {
-  //   try {
-  //     console.log(form);
-  //     const res = await fetch("/api/renovation/renovationForm.js", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-type": "application/json",
-  //       },
-  //       body: JSON.stringify(form),
-  //     });
-  //     const data = await res.json()
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+
+  //SENDING INFORMATION IN JSON FORMAT
+
+  const postData = async (form) => {
+    try {
+      const res = await fetch("/api/renovation/renovation", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       {type == "submit" ? (
-        // <PDFDownloadLink
-        //   document={<PdfRenovation text={text} form={form} date={date} />}
-        //   fileName={`renovation.pdf`}
-        // >
+        //"YES" BUTTON IN MODAL
         <input
           className={styles.button}
           type="submit"
           value="Yes"
           onClick={sendEmail}
         />
-      ) : // </PDFDownloadLink>
+      ) : //"NEXT" AND "FINISH" BUTTON
       type == "finish" ? (
         <button className={styles.button} onClick={handleModal}>
           {text}
         </button>
       ) : type == "cancel" ? (
+        //CANCEL AND "X" BUTTON IN MODAL
         <button
           className={styles.buttonAlternative}
           onClick={handleModalCancel}
@@ -75,6 +77,7 @@ const Button = ({
           {text}
         </button>
       ) : (
+        //BACK BUTTON IN MODAL
         <button
           className={alternative ? styles.buttonAlternative : styles.button}
           onClick={handleStep}
